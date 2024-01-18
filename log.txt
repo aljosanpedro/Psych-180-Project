@@ -1,14 +1,14 @@
-Fri Jan 19 03:47:14 2024
+Fri Jan 19 03:54:04 2024
 Windows-10-10.0.22621
 Ren'Py 8.0.3.22090809
  
 
-Bootstrap to the start of init.init took 0.04s
+Bootstrap to the start of init.init took 0.05s
 Early init took 0.00s
-Loader init took 0.02s
+Loader init took 0.03s
 Loading error handling took 0.03s
-Loading script took 0.07s
-Loading save slot metadata. took 0.00s
+Loading script took 0.08s
+Loading save slot metadata. took 0.01s
 Loading persistent took 0.00s
 Faled to initialize steam: FileNotFoundError("Could not find module 'C:\\Users\\User\\Desktop\\renpy-8.0.1-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
 Running init code took 0.04s
@@ -22,7 +22,7 @@ Initial gc. took 0.02s
 DPI scale factor: 1.500000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
-Creating interface object took 0.25s
+Creating interface object took 0.26s
 Cleaning stores took 0.00s
 Init translation took 0.03s
 Build styles took 0.00s
@@ -32,3 +32,25 @@ Save screen analysis took 0.00s
 Prepare screens took 0.04s
 Save pyanalysis. took 0.00s
 Save bytecode. took 0.00s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.10s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Intel'"
+Renderer: b'Intel(R) Iris(R) Xe Graphics'
+Version: b'4.6.0 - Build 31.0.101.4502'
+Display Info: None
+Screen sizes: virtual=(414, 736) physical=(550, 978) drawable=(550, 978)
+Could not open 'cache/shaders.txt':
+Maximum texture size: 4096x4096
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.00s
