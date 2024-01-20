@@ -4,6 +4,8 @@
 # name of the character.
 transform ch:
     zoom 0.6
+    xalign 0.5
+    yalign 0.75
 transform bg:
     zoom 0.75
 
@@ -19,13 +21,13 @@ label start:
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
 
-    scene bg haruo_casual at bg, left
+    scene bg nozomi_casual at bg, left
 
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
 
-    show haruo casual at ch
+    show nozomi casual at ch, center
 
     # These display lines of dialogue.
 

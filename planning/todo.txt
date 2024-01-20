@@ -1,0 +1,6 @@
+- title screen
+ - disable escape key
+- game
+ - character position
+ - textbox
+ - text
