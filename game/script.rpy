@@ -2,8 +2,13 @@
 
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
+transform ch:
+    zoom 0.6
+transform bg:
+    zoom 0.75
 
-define e = Character("Eileen")
+
+define h = Character("Haruo", color="4d474b")
 
 
 # The game starts here.
@@ -14,19 +19,19 @@ label start:
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
 
-    scene bg room
+    scene bg haruo_casual at bg, left
 
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
 
-    show eileen happy
+    show haruo casual at ch, truecenter
 
     # These display lines of dialogue.
 
-    e "You've created a new Ren'Py game."
+    h "You've created a new Ren'Py game."
 
-    e "Once you add a story, pictures, and music, you can release it to the world!"
+    h "Once you add a story, pictures, and music, you can release it to the world!"
 
     # This ends the game.
 
