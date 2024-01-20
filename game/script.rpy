@@ -25,7 +25,7 @@ label start:
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
 
-    show haruo casual at ch, truecenter
+    show haruo casual at ch
 
     # These display lines of dialogue.
 

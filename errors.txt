@@ -2,9 +2,15 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 28: expected 'simple_expression' not found.
-    show haruo casual at , center
-                         ^
+File "game/screens.rpy", line 326: expected a keyword argument or child statement.
+(Perhaps you left out a " at the end of the first line.)
+    """
+    ^
+            if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
+    
+                ## Help isn't necessary or relevant to mobile devices.
+                textbutton _("Help") action ShowMenu("help")
+            """
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Fri Jan 19 04:23:41 2024
+Sat Jan 20 19:33:59 2024
