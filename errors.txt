@@ -2,15 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 326: expected a keyword argument or child statement.
-(Perhaps you left out a " at the end of the first line.)
-    """
-    ^
-            if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
-    
-                ## Help isn't necessary or relevant to mobile devices.
-                textbutton _("Help") action ShowMenu("help")
-            """
+File "game/gui.rpy", line 88: invalid syntax
+    "gui/main_menu.png" at zoom 0.25
+                         ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Sat Jan 20 19:33:59 2024
+Sat Jan 20 21:28:19 2024
