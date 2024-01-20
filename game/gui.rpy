@@ -55,13 +55,13 @@ define gui.interface_text_color = '#404040'
 ## Fonts and Font Sizes ########################################################
 
 ## The font used for in-game text.
-define gui.text_font = "gui/fonts/text/postregular-font/PostregularRegular-eZYzp.ttf"
+define gui.text_font = "gui/fonts/text/rainbow-cupcake-font/RainbowCupcake-x31zj.ttf"
 
 ## The font used for character names.
 define gui.name_text_font = "gui/fonts/ui/blackberry-jam-font/BlackberryJamPersonalUse-rXOB.ttf"
 
 ## The font used for out-of-game text.
-define gui.interface_text_font = "gui/fonts/text/postregular-font/PostregularRegular-eZYzp.ttf"
+define gui.interface_text_font = "gui/fonts/text/rainbow-cupcake-font/RainbowCupcake-x31zj.ttf"
 
 ## The size of normal dialogue text.
 define gui.text_size = 8

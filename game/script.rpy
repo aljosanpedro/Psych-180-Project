@@ -3,13 +3,13 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 transform ch:
-    zoom 0.6
-    xalign 0.5
-    yalign 0.75
+    zoom 0.65
 transform bg:
-    zoom 0.75
+    zoom 0.8
 
 
+# Disable help keys (i.e. Esc)
+define _game_menu_screen = None
 define h = Character("Haruo", color="4d474b")
 
 
@@ -17,17 +17,19 @@ define h = Character("Haruo", color="4d474b")
 
 label start:
 
+    stop music fadeout 1.0
+
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
 
-    scene bg nozomi_casual at bg, left
+    scene bg madoka_casual at bg
 
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
 
-    show nozomi casual at ch, center
+    show madoka casual at ch, center
 
     # These display lines of dialogue.
 
