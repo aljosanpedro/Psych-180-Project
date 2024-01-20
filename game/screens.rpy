@@ -292,7 +292,7 @@ screen navigation():
 
         if main_menu:
             xalign 0.5
-            yalign 0.8
+            yalign 0.61
         else:
             xpos gui.navigation_xpos
             yalign 0.5
