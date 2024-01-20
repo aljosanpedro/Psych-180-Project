@@ -290,9 +290,12 @@ screen navigation():
     vbox:
         style_prefix "navigation"
 
-        # xpos gui.navigation_xpos
-        xalign 0.5
-        yalign 0.8
+        if main_menu:
+            xalign 0.5
+            yalign 0.8
+        else:
+            xpos gui.navigation_xpos
+            yalign 0.5
 
         spacing gui.navigation_spacing
 
@@ -308,7 +311,7 @@ screen navigation():
 
         textbutton _("Load") action ShowMenu("load")
 
-        textbutton _("Preferences") action ShowMenu("preferences")
+        textbutton _("Options") action ShowMenu("preferences")
 
         if _in_replay:
 
@@ -341,6 +344,7 @@ style navigation_button:
 
 style navigation_button_text:
     properties gui.button_text_properties("navigation_button")
+    outlines [(1, "#ffffff", 0, 0)]
     xalign 0.5
 
 

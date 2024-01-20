@@ -26,7 +26,7 @@ init python:
 define gui.accent_color = '#cc6600'
 
 ## The color used for a text button when it is neither selected nor hovered.
-define gui.idle_color = '#aaaaaa'
+define gui.idle_color = '#4b4b4b'
 
 ## The small color is used for small text, which needs to be brighter/darker to
 ## achieve the same effect.
@@ -37,7 +37,7 @@ define gui.hover_color = '#cc6600'
 
 ## The color used for a text button when it is selected but not focused. A
 ## button is selected if it is the current screen or preference value.
-define gui.selected_color = '#555555'
+define gui.selected_color = '#cc6600'
 
 ## The color used for a text button when it cannot be selected.
 define gui.insensitive_color = '#aaaaaa7f'
@@ -55,13 +55,13 @@ define gui.interface_text_color = '#404040'
 ## Fonts and Font Sizes ########################################################
 
 ## The font used for in-game text.
-define gui.text_font = "DejaVuSans.ttf"
+define gui.text_font = "gui/fonts/text/postregular-font/PostregularRegular-eZYzp.ttf"
 
 ## The font used for character names.
-define gui.name_text_font = "DejaVuSans.ttf"
+define gui.name_text_font = "gui/fonts/ui/blackberry-jam-font/BlackberryJamPersonalUse-rXOB.ttf"
 
 ## The font used for out-of-game text.
-define gui.interface_text_font = "DejaVuSans.ttf"
+define gui.interface_text_font = "gui/fonts/text/postregular-font/PostregularRegular-eZYzp.ttf"
 
 ## The size of normal dialogue text.
 define gui.text_size = 8
@@ -70,7 +70,7 @@ define gui.text_size = 8
 define gui.name_text_size = 10
 
 ## The size of text in the game's user interface.
-define gui.interface_text_size = 8
+define gui.interface_text_size = 20
 
 ## The size of labels in the game's user interface.
 define gui.label_text_size = 8
@@ -258,7 +258,7 @@ define gui.notify_ypos = 15
 define gui.choice_spacing = 8
 
 ## Buttons in the navigation section of the main and game menus.
-define gui.navigation_spacing = 2
+define gui.navigation_spacing = 5
 
 ## Controls the amount of spacing between preferences.
 define gui.pref_spacing = 4
