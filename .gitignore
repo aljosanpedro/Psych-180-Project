@@ -33,3 +33,7 @@ log.txt
 game/saves/persistent
 game/cache/shaders.txt
 game/saves/_reload-2-LT1.save
+*.rpyb
+*.txt
+*.save
+game/saves/persistent
