@@ -64,10 +64,10 @@ define gui.name_text_font = "gui/fonts/ui/blackberry-jam-font/BlackberryJamPerso
 define gui.interface_text_font = "gui/fonts/text/rainbow-cupcake-font/RainbowCupcake-x31zj.ttf"
 
 ## The size of normal dialogue text.
-define gui.text_size = 8
+define gui.text_size = 24
 
 ## The size of character names.
-define gui.name_text_size = 10
+define gui.name_text_size = 32
 
 ## The size of text in the game's user interface.
 define gui.interface_text_size = 32
@@ -95,17 +95,17 @@ define gui.game_menu_background = "gui/game_menu.png"
 ## time.
 
 ## The height of the textbox containing dialogue.
-define gui.textbox_height = 150
+define gui.textbox_height = 350
 
 ## The placement of the textbox vertically on the screen. 0.0 is the top, 0.5 is
 ## center, and 1.0 is the bottom.
-define gui.textbox_yalign = 0.66
+define gui.textbox_yalign = 1.0
 
 
 ## The placement of the speaking character's name, relative to the textbox.
 ## These can be a whole number of pixels from the left or top, or 0.5 to center.
-define gui.name_xpos = 78
-define gui.name_ypos = 0
+define gui.name_xpos = 40
+define gui.name_ypos = 30
 
 ## The horizontal alignment of the character's name. This can be 0.0 for left-
 ## aligned, 0.5 for centered, and 1.0 for right-aligned.
@@ -128,11 +128,11 @@ define gui.namebox_tile = False
 ## The placement of dialogue relative to the textbox. These can be a whole
 ## number of pixels relative to the left or top side of the textbox, or 0.5 to
 ## center.
-define gui.dialogue_xpos = 87
-define gui.dialogue_ypos = 17
+define gui.dialogue_xpos = 50
+define gui.dialogue_ypos = 85
 
 ## The maximum width of dialogue text, in pixels.
-define gui.dialogue_width = 241
+define gui.dialogue_width = 300
 
 ## The horizontal alignment of the dialogue text. This can be 0.0 for left-
 ## aligned, 0.5 for centered, and 1.0 for right-aligned.
