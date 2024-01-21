@@ -150,6 +150,7 @@ style namebox:
 
 style say_label:
     properties gui.text_properties("name", accent=True)
+    outlines [(1, "#202020", 0, 0)]
     xalign gui.name_xalign
     yalign 0.5
 
