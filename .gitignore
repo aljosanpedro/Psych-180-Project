@@ -29,3 +29,7 @@ game/saves/auto-9-LT1.save
 game/saves/navigation.json
 game/saves/persistent
 traceback.txt
+log.txt
+game/saves/persistent
+game/cache/shaders.txt
+game/saves/_reload-2-LT1.save
