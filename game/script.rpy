@@ -10,7 +10,17 @@ transform bg:
 
 # Disable help keys (i.e. Esc)
 define _game_menu_screen = None
-define h = Character("Haruo", color="4d474b")
+
+# CHARACTERS
+# Boys
+define h = Character("Haruo", color="#4D474B")
+define k = Character("Kioshi", color="#516CA9")
+define t = Character("Taishiro", color="#FF848B")
+# Girls
+define m = Character("Madoka", color="#AB6F45")
+define n = Character("Nozomi", color="#474144")
+define r = Character("Ryoko", color="#F6B37E")
+
 
 
 # The game starts here.
