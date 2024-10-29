@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 23: expected '=' not found.
-    define name
-               ^
+File "game/gui.rpy", line 58: expected statement.
+    /Users/aljo/Documents/aljo/dev/renpy-8.2.0-sdk/Simmer/game/gui/fonts/text/text
+          ^
 
-Ren'Py Version: Ren'Py 8.0.3.22090809
-Sun Jan 21 10:56:01 2024
+Ren'Py Version: Ren'Py 8.2.0.24012702
+Thu Aug  1 20:23:04 2024
