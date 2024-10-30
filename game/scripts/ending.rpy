@@ -1,0 +1,3 @@
+label ending:
+
+    jump end

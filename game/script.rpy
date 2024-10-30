@@ -4,14 +4,19 @@
 define _game_menu_screen = None
 
 # Image Transforms
-"""
-transform ch:
-    zoom 0.65
-transform bg:
-    zoom 0.8
-"""
+transform char:
+    zoom 0.7
+    offset (-180,20)
+transform bg_nora_old:
+    zoom 0.7
+transform bg_nora_new:
+    zoom 0.6
+transform bg_senpai:
+    zoom 1.1
 
 # Characters
+# Mascot
+define simon = Character("Simon", color="#CD5F2A")
 # Boys
 define geo = Character("Geo", color="#609AD2")
 define pao = Character("Pao", color="#212630")
@@ -23,25 +28,20 @@ define bianca = Character("Bianca", color="#C3A393")
 define name = ""
 define player = Character("[name]")
 
-# START
+# Transitions
+define swipe_speed = 0.3
 
+define swipe_left = CropMove(swipe_speed, "slideawayleft")
+define swipe_right = CropMove(swipe_speed, "slideawayright")
+define swipe_up = CropMove(swipe_speed, "slideawayup")
+
+define profile_swipe = swipe_up
+
+# Labels
 label start:
+    jump intro
 
-    stop music fadeout 1.0
+# intro -> profile -> chat -> date -> decide -> ending
 
-    scene bg school morning stairs
-    show geo date smile
-
-    geo "You've created a new Ren'Py game."
-
-    while not name:
-        $ name = renpy.input("Name:", length=10)
-        $ name = name.strip().title()
-
-    geo "Hi, my name is [name]!"
-
-    geo "Once you add a story, pictures, and music, you can release it to the world!"
-
-# END
-
+label end:
     return

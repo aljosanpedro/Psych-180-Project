@@ -1,0 +1,3 @@
+label decide:
+
+    jump ending
