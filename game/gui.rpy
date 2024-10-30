@@ -55,10 +55,10 @@ define gui.interface_text_color = '#404040'
 ## Fonts and Font Sizes ########################################################
 
 ## The font used for in-game text.
-define gui.text_font = "gui/fonts/text/text/RainbowCupcake-x31zj.ttf"
+define gui.text_font = "gui/fonts/text/RainbowCupcake-x31zj.ttf"
 
 ## The font used for character names.
-define gui.name_text_font = "gui/fonts/ui/title/BlackberryJamPersonalUse-rXOB.ttf"
+define gui.name_text_font = "gui/fonts/title/BlackberryJamPersonalUse-rXOB.ttf"
 
 ## The font used for out-of-game text.
 define gui.interface_text_font = gui.text_font
@@ -85,7 +85,16 @@ define gui.title_text_size = 17
 ## Main and Game Menus #########################################################
 
 ## The images used for the main and game menus.
-define gui.main_menu_background = "gui/main_menu.png"
+
+define main_menu_pause = 0.5
+image main_menu_animated:
+    "gui/title/left.png"
+    pause main_menu_pause
+    "gui/title/right.png"
+    pause main_menu_pause
+    repeat
+
+define gui.main_menu_background = "main_menu_animated"
 define gui.game_menu_background = "gui/game_menu.png"
 
 

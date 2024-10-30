@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/gui.rpy", line 58: expected statement.
-    /Users/aljo/Documents/aljo/dev/renpy-8.2.0-sdk/Simmer/game/gui/fonts/text/text
-          ^
+File "game/images.rpy", line 2: ATL statement contains two expressions in a row; is one of them a misspelled property? If not, separate them with pass.
+    title left
+              ^
 
 Ren'Py Version: Ren'Py 8.2.0.24012702
-Thu Aug  1 20:23:04 2024
+Wed Oct 30 10:50:30 2024
