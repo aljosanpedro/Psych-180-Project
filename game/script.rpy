@@ -41,7 +41,7 @@ define profile_swipe = swipe_up
 label start:
     jump intro
 
-# intro -> profile -> chat -> date -> decide -> ending
+# intro -> profile -> swipe -> chat -> date -> decide -> ending
 
 label end:
     return
