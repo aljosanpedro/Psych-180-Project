@@ -1,4 +1,6 @@
 label swipe:
+    stop music fadeout 1.0
+    play music "audio/music/swipe.ogg"
 
     label .geo:
         scene bus morning at bg_nora_new
