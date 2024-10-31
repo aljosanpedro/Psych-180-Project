@@ -7,27 +7,27 @@ image main_menu_animated:
     pause main_menu_pause
     repeat
 
-# Simon
-define simon_slow_pause = 0.5
-image simon_slow:
-    "images/ui/simon/big/left.png"
-    pause simon_slow_pause
-    "images/ui/simon/big/right.png"
-    pause simon_slow_pause
+# Kulo
+define kulo_slow_pause = 0.5
+image kulo_slow:
+    "images/ui/kulo/big/left.png"
+    pause kulo_slow_pause
+    "images/ui/kulo/big/right.png"
+    pause kulo_slow_pause
     repeat
 
-define simon_mid_pause = 0.25
-image simon_mid:
-    "images/ui/simon/big/left.png"
-    pause simon_mid_pause
-    "images/ui/simon/big/right.png"
-    pause simon_mid_pause
+define kulo_mid_pause = 0.25
+image kulo_mid:
+    "images/ui/kulo/big/left.png"
+    pause kulo_mid_pause
+    "images/ui/kulo/big/right.png"
+    pause kulo_mid_pause
     repeat
 
-define simon_fast_pause = 0.1
-image simon_fast:
-    "images/ui/simon/big/left.png"
-    pause simon_fast_pause
-    "images/ui/simon/big/right.png"
-    pause simon_fast_pause
+define kulo_fast_pause = 0.1
+image kulo_fast:
+    "images/ui/kulo/big/left.png"
+    pause kulo_fast_pause
+    "images/ui/kulo/big/right.png"
+    pause kulo_fast_pause
     repeat

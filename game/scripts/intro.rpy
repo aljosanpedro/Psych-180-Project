@@ -5,17 +5,17 @@ label intro:
 
     scene app bg
 
-    show simon_slow
-    simon "Loading..."
-    hide simon_slow
+    show kulo_slow
+    kulo "Loading..."
+    hide kulo_slow
 
-    show simon_mid
-    simon "Loading..."
-    hide simon_mid
+    show kulo_mid
+    kulo "Loading..."
+    hide kulo_mid
 
-    show simon_fast
-    simon "Loading..."
-    hide simon_fast
+    show kulo_fast
+    kulo "Loading..."
+    hide kulo_fast
 
     while not name:
         $ name = renpy.input("Name:", length=10)

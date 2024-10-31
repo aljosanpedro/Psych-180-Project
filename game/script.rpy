@@ -20,7 +20,7 @@ transform bg_resto_cafe:
 
 # Characters
 # Mascot
-define simon = Character("Simon", color="#CD5F2A")
+define kulo = Character("Kulo", color="#CD5F2A")
 # Boys
 define geo = Character("Geo", color="#609AD2")
 define pao = Character("Pao", color="#212630")
@@ -33,13 +33,19 @@ define name = ""
 define player = Character("[name]")
 
 # Transitions
-define swipe_speed = 0.3
-
+define swipe_speed = 0.2
 define swipe_left = CropMove(swipe_speed, "slideawayleft")
 define swipe_right = CropMove(swipe_speed, "slideawayright")
-define swipe_up = PushMove(0.3, "pushup")
 
-define profile_swipe = swipe_up
+define scroll_speed = 0.75
+define scroll_up = PushMove(scroll_speed, "pushup")
+
+# Phone
+define n_nvl = Character("Nighten", kind=nvl, image="nighten", callback=Phone_SendSound)
+define e_nvl = Character("Eileen", kind=nvl, callback=Phone_ReceiveSound)
+
+define config.adv_nvl_transition = None
+define config.nvl_adv_transition = Dissolve(0.3)
 
 # Labels
 label start:

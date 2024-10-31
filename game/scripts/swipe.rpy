@@ -2,23 +2,31 @@ label swipe:
     stop music fadeout 1.0
     play music "audio/music/swipe.ogg"
 
-    define rights = []
-    $ swiped = False
-    $ direction = ""
+    python:
+        rights = []
+        swiped = False
+        direction = ""
+        character = ""
 
-    jump swipe.profiles.geo
+    jump swipe.geo
 
     label .choice:
+        show app textbox
+        kulo "What will you do?" 
+
         menu:
-            "Left":
+            "Swipe Left":
                 $ swiped = True
                 $ direction = "left"
-            "Right":
+            "Swipe Right":
                 $ swiped = True
                 $ direction = "right"
+
+                $ rights.append(character)
             "Reread Profile":
                 $ swiped = False
                 $ direction = "up"
+
         return
 
     label .direction:
@@ -27,16 +35,18 @@ label swipe:
         elif direction == "right":
             with swipe_right
         elif direction == "up":
-            with swipe_up
+            with scroll_up
 
         return
 
     label .geo:
+        $ character = "geo"
         $ swiped = False
+
         while not swiped:
             scene bus morning at bg_nora_new
             show geo casual neutral at char
-            with profile_swipe
+            with scroll_up
             geo ""
             show geo casual smile at char
             with dissolve
@@ -44,18 +54,20 @@ label swipe:
 
             scene school morning stairs at bg_nora_new
             show geo work happy at char
-            with profile_swipe
+            with scroll_up
             geo ""
 
             scene resto evening center at bg_resto_evening
             show geo date smile at char
-            with profile_swipe
+            with scroll_up
             geo ""
 
             call swipe.choice
 
     label .pao:
+        $ character = "pao"
         $ swiped = False
+
         while not swiped:
             scene street afternoon store at bg_nora_new
             show pao date neutral at char
@@ -67,18 +79,20 @@ label swipe:
 
             scene resto inside at bg_nora_old
             show pao work happy at char
-            with profile_swipe
+            with scroll_up
             pao ""
 
             scene house sala table at bg_senpai
             show pao casual neutral at char
-            with profile_swipe
+            with scroll_up
             pao ""
 
             call swipe.choice
 
     label .lily:
+        $ character = "lily"
         $ swiped = False
+
         while not swiped:
             scene school morning shrine at bg_nora_new
             show lily date smile at char
@@ -90,18 +104,20 @@ label swipe:
 
             scene playground slide at bg_senpai
             show lily casual shock at char
-            with profile_swipe
+            with scroll_up
             lily ""
 
             scene train inside at bg_nora_old
             show lily work neutral at char
-            with profile_swipe
+            with scroll_up
             lily ""
 
             call swipe.choice
 
     label .bianca:
+        $ character = "bianca"
         $ swiped = False
+
         while not swiped:
             scene resto cake shop at bg_nora_old
             show bianca date neutral at char
@@ -113,12 +129,12 @@ label swipe:
 
             scene house kitchen at bg_senpai
             show bianca work happy at char
-            with profile_swipe
+            with scroll_up
             bianca ""
 
             scene house bedroom closet at bg_senpai
             show bianca casual neutral at char
-            with profile_swipe
+            with scroll_up
             bianca ""
 
             call swipe.choice
