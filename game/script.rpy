@@ -13,6 +13,10 @@ transform bg_nora_new:
     zoom 0.6
 transform bg_senpai:
     zoom 1.1
+transform bg_resto_evening:
+    zoom 0.4
+transform bg_resto_cafe:
+    zoom 0.9
 
 # Characters
 # Mascot
@@ -33,7 +37,7 @@ define swipe_speed = 0.3
 
 define swipe_left = CropMove(swipe_speed, "slideawayleft")
 define swipe_right = CropMove(swipe_speed, "slideawayright")
-define swipe_up = CropMove(swipe_speed, "slideawayup")
+define swipe_up = PushMove(0.3, "pushup")
 
 define profile_swipe = swipe_up
 

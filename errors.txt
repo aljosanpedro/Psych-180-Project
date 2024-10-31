@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 100: end of line expected.
-    with swipe left
-               ^
+File "game/scripts/swipe.rpy", line 9: end of line expected.
+    jump swipe.profiles.geo
+                       ^
 
 Ren'Py Version: Ren'Py 8.2.0.24012702
-Wed Oct 30 14:55:41 2024
+Thu Oct 31 22:52:32 2024

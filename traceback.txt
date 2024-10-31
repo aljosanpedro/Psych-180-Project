@@ -1,28 +1,26 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 74, in script
-    with swipe
-  File "game/script.rpy", line 74, in <module>
-    with swipe
-NameError: name 'swipe' is not defined
+  File "game/scripts/swipe.rpy", line 44, in script call
+    call choice
+  File "game/scripts/swipe.rpy", line 44, in script call
+    call choice
+ScriptError: could not find label 'choice'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 74, in script
-    with swipe
-  File "/Users/aljo/Downloads/5y1s/psych 180/renpy-8.2.0-sdk/renpy/ast.py", line 1356, in execute
-    trans = renpy.python.py_eval(self.expr)
-  File "/Users/aljo/Downloads/5y1s/psych 180/renpy-8.2.0-sdk/renpy/python.py", line 1209, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "/Users/aljo/Downloads/5y1s/psych 180/renpy-8.2.0-sdk/renpy/python.py", line 1202, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/script.rpy", line 74, in <module>
-    with swipe
-NameError: name 'swipe' is not defined
+  File "game/scripts/swipe.rpy", line 44, in script call
+    call choice
+  File "/Users/aljo/Downloads/5y1s/psych 180/renpy-8.2.0-sdk/renpy/ast.py", line 1416, in execute
+    rv = renpy.game.context().call(label, return_site=self.next.name)
+  File "game/scripts/swipe.rpy", line 44, in script call
+    call choice
+  File "/Users/aljo/Downloads/5y1s/psych 180/renpy-8.2.0-sdk/renpy/script.py", line 1103, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'choice'.
 
 macOS-15.0.1-arm64-arm-64bit arm64
 Ren'Py 8.2.0.24012702
 Simmer 1.0
-Wed Oct 30 14:50:31 2024
+Thu Oct 31 22:41:05 2024
