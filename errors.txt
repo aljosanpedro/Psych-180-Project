@@ -2,9 +2,17 @@
 errors listed below, and try again.
 
 
-File "game/scripts/swipe.rpy", line 17: invalid syntax
-    rng renpy.random.Random(seed=renpy.random.random())
-         ^
+File "game/scripts/profile.rpy", line 23: expected statement.
+    section_correct = True
+                    ^
+
+File "game/scripts/profile.rpy", line 24: expected statement.
+    player_profile.update(section_stats)
+                                        ^
+
+File "game/scripts/profile.rpy", line 26: expected statement.
+    section_correct = False
+                    ^
 
 Ren'Py Version: Ren'Py 8.2.0.24012702
-Fri Nov  1 20:49:37 2024
+Fri Nov  1 23:28:24 2024

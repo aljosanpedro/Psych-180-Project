@@ -45,18 +45,22 @@ label swipe:
         scene app bg
         call swipe.direction
         scene app bg textbox with dissolve
+
+        if len(rights) == 0:
+            mascot "You liked...no one!"
+        else:
+            $ rights_extracted = ', '.join(rights)
+            mascot "You liked: [rights_extracted]"
+
         mascot "Are you OK with your swipes?"
         menu:
             "Yup!":
-                if len(rights) > 0:
-                    $ rights = ', '.join(rights)    
-                    
-                    mascot "You liked [rights]"
-
-                    return
+                if len(rights) == 0:
+                    jump ending.pass       
                 else:
-                    jump ending.pass
+                    jump chat
             "Repeat":
+                call swipe.reset
                 jump swipe.flow
 
     label .choice:
