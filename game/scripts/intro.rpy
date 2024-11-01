@@ -17,9 +17,18 @@ label intro:
     kulo "Loading..."
     hide kulo_fast
 
-    while not name:
-        $ name = renpy.input("Name:", length=10)
-        $ name = name.strip().title()
+    $ correct_name = False
+    while not correct_name:
+        $ name = ""
+        while not name:
+            $ name = renpy.input("Name:", length=10)
+            $ name = name.strip().title()
+        kulo "Your name is [name]?"
+        menu:
+            "Yes":
+                $ correct_name = True
+            "No":
+                $ correct_name = False
 
     "Hello, [name]!\ntest\ntest\ntest"
 

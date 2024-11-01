@@ -1,195 +1,36 @@
-2024-10-31 15:48:39 UTC
+2024-11-01 03:37:14 UTC
 macOS-15.0.1-arm64-arm-64bit
 Ren'Py 8.2.0.24012702
 
-Early init took 0.05s
-Loading error handling took 0.03s
-Loading script took 0.18s
-Loading save slot metadata took 0.03s
-Loading persistent took 0.00s
-INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
-Running init code took 0.05s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.03s
-Index archives took 0.00s
-Backing up script files to '/Users/aljo/Library/RenPy/backups/Simmer':
-Dump and make backups took 0.00s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.03s
-DPI scale factor: 1.000000
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.03s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-INFO:renpy_warp_service:connected to renpy warp socket server on :40111
-Save bytecode. took 0.03s
-Running _start took 0.00s
-Interface start took 0.25s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1280, 800)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'Apple'"
-Renderer: b'Apple M1'
-Version: b'2.1 Metal - 89.3'
-Display Info: None
-Screen sizes: virtual=(414, 736) physical=(1280, 772) drawable=(2560, 1544)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(414, 736) physical=(1280, 772) drawable=(2560, 1544)
-Maximum texture size: 4096x4096
-
-Full traceback:
-  File "game/scripts/swipe.rpy", line 49, in script
-    with profile_swipe
-  File "/Users/aljo/Downloads/5y1s/psych 180/renpy-8.2.0-sdk/renpy/ast.py", line 1356, in execute
-    trans = renpy.python.py_eval(self.expr)
-  File "/Users/aljo/Downloads/5y1s/psych 180/renpy-8.2.0-sdk/renpy/python.py", line 1209, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "/Users/aljo/Downloads/5y1s/psych 180/renpy-8.2.0-sdk/renpy/python.py", line 1202, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/scripts/swipe.rpy", line 49, in <module>
-    with profile_swipe
-NameError: name 'profile_swipe' is not defined
-
-While running game code:
-  File "game/scripts/swipe.rpy", line 49, in script
-    with profile_swipe
-  File "game/scripts/swipe.rpy", line 49, in <module>
-    with profile_swipe
-NameError: name 'profile_swipe' is not defined
-INFO:renpy_warp_service:closing websocket connection :40111
-INFO:renpy_warp_service:socket service got code 4000, service closing
-Resetting cache.
-Early init took 47.77s
-Loading error handling took 0.03s
-Loading script took 0.12s
+Early init took 0.03s
+Loading error handling took 0.02s
+Loading script took 0.04s
 Loading save slot metadata took 0.02s
 Loading persistent took 0.00s
 INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
 Running init code took 0.02s
-INFO:renpy_warp_service:connected to renpy warp socket server on :40111
 Loading analysis data took 0.01s
 Analyze and compile ATL took 0.00s
 Reloading save slot metadata took 0.02s
 Index archives took 0.00s
-Backing up script files to '/Users/aljo/Library/RenPy/backups/Simmer':
 Dump and make backups took 0.00s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc took 0.03s
+Initial gc took 0.02s
 DPI scale factor: 1.000000
 Creating interface object took 0.00s
 Cleaning stores took 0.00s
-Init translation took 0.03s
+Init translation took 0.02s
 Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.05s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.03s
 Save pyanalysis. took 0.00s
-Save bytecode. took 0.02s
+Save bytecode. took 0.00s
 Running _start took 0.00s
-Interface start took 0.10s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1280, 800)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'Apple'"
-Renderer: b'Apple M1'
-Version: b'2.1 Metal - 89.3'
-Display Info: None
-Screen sizes: virtual=(414, 736) physical=(1280, 772) drawable=(2560, 1544)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(414, 736) physical=(1280, 772) drawable=(2560, 1544)
-Maximum texture size: 4096x4096
-INFO:renpy_warp_service:closing websocket connection :40111
-INFO:renpy_warp_service:socket service got code 4000, service closing
-Resetting cache.
-Early init took 89.54s
-Loading error handling took 0.02s
-Loading script took 0.09s
-Loading save slot metadata took 0.02s
-Loading persistent took 0.00s
-INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
-Running init code took 0.03s
 INFO:renpy_warp_service:connected to renpy warp socket server on :40111
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
-Index archives took 0.00s
-Backing up script files to '/Users/aljo/Library/RenPy/backups/Simmer':
-Dump and make backups took 0.00s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.03s
-DPI scale factor: 1.000000
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.03s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Interface start took 0.07s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1280, 800)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'Apple'"
-Renderer: b'Apple M1'
-Version: b'2.1 Metal - 89.3'
-Display Info: None
-Screen sizes: virtual=(414, 736) physical=(1280, 772) drawable=(2560, 1544)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(414, 736) physical=(1280, 772) drawable=(2560, 1544)
-Maximum texture size: 4096x4096
-INFO:renpy_warp_service:closing websocket connection :40111
-INFO:renpy_warp_service:socket service got code 4000, service closing
-Resetting cache.
-Early init took 112.45s
-Loading error handling took 0.02s
-Loading script took 0.08s
-Loading save slot metadata took 0.02s
-Loading persistent took 0.00s
-INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
-Running init code took 0.03s
-INFO:renpy_warp_service:connected to renpy warp socket server on :40111
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
-Index archives took 0.00s
-Backing up script files to '/Users/aljo/Library/RenPy/backups/Simmer':
-Dump and make backups took 0.00s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.04s
-DPI scale factor: 1.000000
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.03s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Interface start took 0.07s
+Interface start took 0.18s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1280, 800)

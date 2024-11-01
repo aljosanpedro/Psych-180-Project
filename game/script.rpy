@@ -41,8 +41,17 @@ define scroll_speed = 0.75
 define scroll_up = PushMove(scroll_speed, "pushup")
 
 # Phone
+# Mascot
+define kulo_phone = Character("Kulo", color="#CD5F2A", kind=nvl, callback=Phone_SendSound)
+# Boys
+define geo_phone = Character("Geo", color="#609AD2", kind=nvl, callback=Phone_SendSound)
+define pao_phone = Character("Pao", color="#212630", kind=nvl, callback=Phone_SendSound)
+# Girls
+define lily_phone = Character("Lily", color="#61575A", kind=nvl, callback=Phone_SendSound)
+define bianca_phone = Character("Bianca", color="#C3A393", kind=nvl, callback=Phone_SendSound)
+
 define n_nvl = Character("Nighten", kind=nvl, image="nighten", callback=Phone_SendSound)
-define e_nvl = Character("Eileen", kind=nvl, callback=Phone_ReceiveSound)
+define e_nvl = Character("Eileen", kind=nvl, callback=Phone_SendSound)
 
 define config.adv_nvl_transition = None
 define config.nvl_adv_transition = Dissolve(0.3)
