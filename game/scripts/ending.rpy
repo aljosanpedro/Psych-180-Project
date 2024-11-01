@@ -1,7 +1,8 @@
 label ending:
-    stop music fadeout 1.0
+    
     
     label .dating:
+        stop music fadeout 1.0
         play music "audio/music/endings/dating.ogg"
 
         label .geo:
@@ -29,9 +30,15 @@ label ending:
             lily ""
 
     label .friends:
+        stop music fadeout 1.0
         play music "audio/music/endings/friends.ogg"
 
+        mascot "friends"
+
     label .pass:
+        stop music fadeout 1.0
         play music "audio/music/endings/pass.ogg"
+
+        mascot "pass"
         
     jump end

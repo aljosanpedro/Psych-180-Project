@@ -3,17 +3,65 @@ label swipe:
     play music "audio/music/swipe.ogg"
 
     label .setup:
-        python:
-            rights = []
-            swiped = False
-            direction = ""
-            character = ""
+        define rights = []
+        define swiped = False
+        define direction = "up"
+        define character = ""
+        define characters = ["geo", "pao", "lily", "bianca"]
+        define profile = ""
 
-        jump swipe.geo
+    label .flow:
+        $ renpy.random.shuffle(characters)
+        while len(characters) > 0:
+            python:
+                profile = renpy.random.choice(characters)
+                characters.remove(profile)
+            mascot "[profile]"
+            mascot "[characters]"
+
+            if profile == "geo":
+                call swipe.geo
+            elif profile == "pao":
+                call swipe.pao
+            elif profile == "lily":
+                call swipe.lily
+            elif profile == "bianca":
+                call swipe.bianca
+
+        jump swipe.repeat
+
+    label .reset:
+        $ rights = []
+        $ swiped = False
+        $ direction = "up"
+        $ character = ""
+        $ characters = ["geo", "pao", "lily", "bianca"]
+        $ renpy.random.shuffle(characters)
+        $ profile = ""
+
+        return
+
+    label .repeat:
+        scene app bg
+        call swipe.direction
+        scene app bg textbox with dissolve
+        mascot "Are you OK with your swipes?"
+        menu:
+            "Yup!":
+                if len(rights) > 0:
+                    $ rights = ', '.join(rights)    
+                    
+                    mascot "You liked [rights]"
+
+                    return
+                else:
+                    jump ending.pass
+            "Repeat":
+                jump swipe.flow
 
     label .choice:
         show app textbox
-        kulo "So, what do you think?" 
+        kulo "So, what do you think?"
 
         menu:
             "Swipe Left":
@@ -47,7 +95,7 @@ label swipe:
         while not swiped:
             scene bus morning at bg_nora_new
             show geo casual neutral at char
-            with new_screen
+            call swipe.direction
             geo ""
             show geo casual smile at char
             with dissolve
@@ -64,6 +112,8 @@ label swipe:
             geo ""
 
             call swipe.choice
+
+        return
 
     label .pao:
         $ character = "pao"
@@ -90,6 +140,8 @@ label swipe:
 
             call swipe.choice
 
+        return
+
     label .lily:
         $ character = "lily"
         $ swiped = False
@@ -114,6 +166,8 @@ label swipe:
             lily ""
 
             call swipe.choice
+        
+        return
 
     label .bianca:
         $ character = "bianca"
@@ -140,16 +194,4 @@ label swipe:
 
             call swipe.choice
 
-    label .repeat:
-        scene app bg
-        call swipe.direction
-        scene app bg textbox with dissolve
-        mascot "Are you OK with your swipes?"
-        menu:
-            "Yup!":
-                pass
-                mascot "You liked [rights]"
-            "Repeat":
-                jump swipe.setup
-
-    jump chat
+        return
