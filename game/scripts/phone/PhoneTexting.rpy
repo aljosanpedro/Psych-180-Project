@@ -39,20 +39,18 @@ screen PhoneDialogue(dialogue, items=None):
                     use nvl_phonetext(dialogue,items)
                     null height 100
         # Button to progress
-        if len(items)==0: #If we don't have a menu
-            button:
-                padding (0,0)
-                add Solid("#ffda4a")
-                # add Transform("continue_btn.png", align=(0.5,0.5))
-                action RollForward()
-        else:
+        if len(items)!=0: #If we don't have a menu
             # Phone Menu Choice
             frame:
-                background Solid("#ffda4a")
+                xpos 0.0
+                ypos -1600
+                background "images/ui/app/app textbox.png"
+                # background Solid("#FAF5D8")
                 foreground None
 
                 vbox:
-                    yalign 0.5
+                    xpos 0
+                    ypos 530
                     for i in items: #For each choices...
                         button:
                             action i.action
@@ -60,13 +58,13 @@ screen PhoneDialogue(dialogue, items=None):
                             frame:
                                 background Solid("#f1f6fe")
                                 foreground None
-                                xysize (1000,120)
+                                xysize (300,50)
 
                                 text i.caption:
                                     align (0.5,0.5)
                                     text_align 0.5
-                                    size 60
-                            # style "nvl_button"
+                                    size 24
+                            #style "nvl_button"
 
 
 # The actual messenger screen

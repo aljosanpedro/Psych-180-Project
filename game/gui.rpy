@@ -10,7 +10,7 @@ init offset = -2
 ## width and height of the game.
 init python:
     gui.init(414, 736)
-
+    # gui.init(1080, 1920)
 
 
 ################################################################################
@@ -85,7 +85,8 @@ define gui.title_text_size = 17
 ## Main and Game Menus #########################################################
 
 ## The images used for the main and game menus.
-define gui.main_menu_background = "main_menu_animated"
+define gui.main_menu_background = "main_menu_anim"
+#define gui.main_menu_background = renpy.random.choice([main_menu_kulo, main_menu_kali])
 define gui.game_menu_background = "gui/game_menu.png"
 
 
@@ -395,7 +396,7 @@ define gui.nvl_thought_width = 253
 define gui.nvl_thought_xalign = 0.0
 
 ## The position of nvl menu_buttons.
-define gui.nvl_button_xpos = 146
+define gui.nvl_button_xpos = 0.0
 define gui.nvl_button_xalign = 0.0
 
 ## Localization ################################################################

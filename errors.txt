@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/scripts/phone/PhoneTexting.rpy", line 93: 'define' is not a keyword argument or valid child of the for statement.
-    define send_frame = "phone/phone_send_frame.png"
-          ^
+File "game/scripts/swipe.rpy", line 147: choice menuitem expects a non-empty block.
+    "Yup!":
+           ^
 
 Ren'Py Version: Ren'Py 8.2.0.24012702
-Fri Nov  1 10:48:01 2024
+Fri Nov  1 12:36:41 2024

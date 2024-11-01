@@ -1,109 +1,64 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While loading <renpy.display.im.Image object ('phone/phone_receive_frame.png') at 0x1063a5ee0>:
-  File "game/scripts/chat.rpy", line 27, in script
-    n_nvl "{size=*[scale]}Hey! Welcome to the demo Eileen!"
-  File "renpy/common/00nvl_mode.rpy", line 381, in do_display
-    renpy.display_say(
-OSError: Couldn't find file 'phone/phone_receive_frame.png'.
+After initialization, but before game start.
+  File "game/scripts/phone/PhoneTexting.rpy", line 17, in prepare_screen
+    screen PhoneDialogue(dialogue, items=None):
+  File "game/scripts/phone/PhoneTexting.rpy", line 17, in prepare
+    screen PhoneDialogue(dialogue, items=None):
+  File "game/scripts/phone/PhoneTexting.rpy", line 21, in prepare
+    vbox:
+  File "game/scripts/phone/PhoneTexting.rpy", line 21, in prepare
+    vbox:
+  File "game/scripts/phone/PhoneTexting.rpy", line 42, in prepare
+    if len(items)==0: #If we don't have a menu
+  File "game/scripts/phone/PhoneTexting.rpy", line 48, in prepare
+    else:
+  File "game/scripts/phone/PhoneTexting.rpy", line 50, in prepare
+    frame:
+  File "game/scripts/phone/PhoneTexting.rpy", line 50, in prepare
+    frame:
+SyntaxError: unexpected EOF while parsing (PhoneTexting.rpy, line 51)
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/scripts/chat.rpy", line 27, in script
-    n_nvl "{size=*[scale]}Hey! Welcome to the demo Eileen!"
-  File "/Users/aljo/Downloads/5y1s/psych 180/renpy-8.2.0-sdk/renpy/ast.py", line 2557, in execute
-    Say.execute(self)
-  File "/Users/aljo/Downloads/5y1s/psych 180/renpy-8.2.0-sdk/renpy/ast.py", line 615, in execute
-    renpy.exports.say(who, what, *args, **kwargs)
-  File "/Users/aljo/Downloads/5y1s/psych 180/renpy-8.2.0-sdk/renpy/exports.py", line 1493, in say
-    who(what, *args, **kwargs)
-  File "/Users/aljo/Downloads/5y1s/psych 180/renpy-8.2.0-sdk/renpy/character.py", line 1391, in __call__
-    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
-  File "renpy/common/00nvl_mode.rpy", line 381, in do_display
-    renpy.display_say(
-  File "/Users/aljo/Downloads/5y1s/psych 180/renpy-8.2.0-sdk/renpy/character.py", line 738, in display_say
-    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
-  File "/Users/aljo/Downloads/5y1s/psych 180/renpy-8.2.0-sdk/renpy/ui.py", line 301, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "/Users/aljo/Downloads/5y1s/psych 180/renpy-8.2.0-sdk/renpy/display/core.py", line 2165, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
-  File "/Users/aljo/Downloads/5y1s/psych 180/renpy-8.2.0-sdk/renpy/display/core.py", line 2814, in interact_core
-    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
-  File "/Users/aljo/Downloads/5y1s/psych 180/renpy-8.2.0-sdk/renpy/display/core.py", line 1352, in draw_screen
-    surftree = renpy.display.render.render_screen(
-  File "render.pyx", line 486, in renpy.display.render.render_screen
-  File "render.pyx", line 260, in renpy.display.render.render
-  File "/Users/aljo/Downloads/5y1s/psych 180/renpy-8.2.0-sdk/renpy/display/layout.py", line 900, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 260, in renpy.display.render.render
-  File "/Users/aljo/Downloads/5y1s/psych 180/renpy-8.2.0-sdk/renpy/display/layout.py", line 900, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 260, in renpy.display.render.render
-  File "/Users/aljo/Downloads/5y1s/psych 180/renpy-8.2.0-sdk/renpy/display/layout.py", line 900, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 260, in renpy.display.render.render
-  File "/Users/aljo/Downloads/5y1s/psych 180/renpy-8.2.0-sdk/renpy/display/screen.py", line 754, in render
-    child = renpy.display.render.render(self.child, w, h, st, at)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 260, in renpy.display.render.render
-  File "/Users/aljo/Downloads/5y1s/psych 180/renpy-8.2.0-sdk/renpy/display/layout.py", line 900, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 260, in renpy.display.render.render
-  File "/Users/aljo/Downloads/5y1s/psych 180/renpy-8.2.0-sdk/renpy/display/layout.py", line 1121, in render
-    surf = render(d, width - x, rh, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 260, in renpy.display.render.render
-  File "/Users/aljo/Downloads/5y1s/psych 180/renpy-8.2.0-sdk/renpy/display/layout.py", line 1361, in render
-    surf = render(child,
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 260, in renpy.display.render.render
-  File "/Users/aljo/Downloads/5y1s/psych 180/renpy-8.2.0-sdk/renpy/display/viewport.py", line 285, in render
-    surf = renpy.display.render.render(self.child, child_width, child_height, st, at)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 260, in renpy.display.render.render
-  File "/Users/aljo/Downloads/5y1s/psych 180/renpy-8.2.0-sdk/renpy/display/layout.py", line 1121, in render
-    surf = render(d, width - x, rh, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 260, in renpy.display.render.render
-  File "/Users/aljo/Downloads/5y1s/psych 180/renpy-8.2.0-sdk/renpy/display/layout.py", line 1076, in render
-    surf = render(d, rw, height - y, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 260, in renpy.display.render.render
-  File "/Users/aljo/Downloads/5y1s/psych 180/renpy-8.2.0-sdk/renpy/display/layout.py", line 1121, in render
-    surf = render(d, width - x, rh, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 260, in renpy.display.render.render
-  File "/Users/aljo/Downloads/5y1s/psych 180/renpy-8.2.0-sdk/renpy/display/transform.py", line 957, in render
-    return RenderTransform(self).render(width, height, st, at)
-  File "accelerator.pyx", line 978, in renpy.display.accelerator.RenderTransform.render
-  File "accelerator.pyx", line 413, in renpy.display.accelerator.RenderTransform.render_child
-  File "render.pyx", line 260, in renpy.display.render.render
-  File "/Users/aljo/Downloads/5y1s/psych 180/renpy-8.2.0-sdk/renpy/display/layout.py", line 1396, in render
-    back = render(style.background, bw, bh, st, at)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 260, in renpy.display.render.render
-  File "/Users/aljo/Downloads/5y1s/psych 180/renpy-8.2.0-sdk/renpy/display/imagelike.py", line 300, in render
-    crend = render(image, width, height, st, at)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 260, in renpy.display.render.render
-  File "/Users/aljo/Downloads/5y1s/psych 180/renpy-8.2.0-sdk/renpy/display/im.py", line 626, in render
-    return cache.get(self, render=True)
-  File "/Users/aljo/Downloads/5y1s/psych 180/renpy-8.2.0-sdk/renpy/display/im.py", line 309, in get
-    surf = image.load()
-  File "/Users/aljo/Downloads/5y1s/psych 180/renpy-8.2.0-sdk/renpy/display/im.py", line 761, in load
+  File "/Users/aljo/Downloads/5y1s/psych 180/renpy-8.2.0-sdk/renpy/bootstrap.py", line 359, in bootstrap
+    renpy.main.main()
+  File "/Users/aljo/Downloads/5y1s/psych 180/renpy-8.2.0-sdk/renpy/main.py", line 635, in main
+    run(restart)
+  File "/Users/aljo/Downloads/5y1s/psych 180/renpy-8.2.0-sdk/renpy/main.py", line 94, in run
+    renpy.display.screen.prepare_screens()
+  File "/Users/aljo/Downloads/5y1s/psych 180/renpy-8.2.0-sdk/renpy/display/screen.py", line 1026, in prepare_screens
+    s.ast.prepare_screen()
+  File "game/scripts/phone/PhoneTexting.rpy", line 17, in prepare_screen
+    screen PhoneDialogue(dialogue, items=None):
+  File "game/scripts/phone/PhoneTexting.rpy", line 17, in prepare
+    screen PhoneDialogue(dialogue, items=None):
+  File "game/scripts/phone/PhoneTexting.rpy", line 21, in prepare
+    vbox:
+  File "game/scripts/phone/PhoneTexting.rpy", line 21, in prepare
+    vbox:
+  File "game/scripts/phone/PhoneTexting.rpy", line 42, in prepare
+    if len(items)==0: #If we don't have a menu
+  File "game/scripts/phone/PhoneTexting.rpy", line 48, in prepare
+    else:
+  File "game/scripts/phone/PhoneTexting.rpy", line 50, in prepare
+    frame:
+  File "game/scripts/phone/PhoneTexting.rpy", line 50, in prepare
+    frame:
+  File "/Users/aljo/Downloads/5y1s/psych 180/renpy-8.2.0-sdk/renpy/py3analysis.py", line 803, in ast_eval
+    return self.ast_eval_literal(expr)[0]
+  File "/Users/aljo/Downloads/5y1s/psych 180/renpy-8.2.0-sdk/renpy/py3analysis.py", line 785, in ast_eval_literal
+    expr = py_compile(expr, 'eval', ast_node=True)
+  File "/Users/aljo/Downloads/5y1s/psych 180/renpy-8.2.0-sdk/renpy/python.py", line 1144, in py_compile
     raise e
-  File "/Users/aljo/Downloads/5y1s/psych 180/renpy-8.2.0-sdk/renpy/display/im.py", line 711, in load
-    filelike = renpy.loader.load(self.filename, directory="images")
-  File "/Users/aljo/Downloads/5y1s/psych 180/renpy-8.2.0-sdk/renpy/loader.py", line 672, in load
-    raise IOError("Couldn't find file '%s'." % name)
-OSError: Couldn't find file 'phone/phone_receive_frame.png'.
+  File "/Users/aljo/Downloads/5y1s/psych 180/renpy-8.2.0-sdk/renpy/python.py", line 1081, in py_compile
+    raise orig_e
+  File "/Users/aljo/Downloads/5y1s/psych 180/renpy-8.2.0-sdk/renpy/python.py", line 1073, in py_compile
+    tree = compile(source, filename, py_mode, ast.PyCF_ONLY_AST | flags, 1)
+SyntaxError: unexpected EOF while parsing (PhoneTexting.rpy, line 51)
 
 macOS-15.0.1-arm64-arm-64bit arm64
 Ren'Py 8.2.0.24012702
 Simmer 1.0
-Fri Nov  1 10:49:08 2024
+Fri Nov  1 15:08:09 2024

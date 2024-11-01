@@ -5,17 +5,47 @@ label intro:
 
     scene app bg
 
-    show kulo_slow
-    kulo "Loading..."
-    hide kulo_slow
+    show blank_slow
+    simmer "Loading..."
+    hide blank_slow
 
-    show kulo_mid
-    kulo "Loading..."
-    hide kulo_mid
+    scene app bg textbox
+    simmer "Boy or girl?"
+    menu:
+        "Boy":
+            $ mascot = kulo
+        "Girl":
+            $ mascot = kali
 
-    show kulo_fast
-    kulo "Loading..."
-    hide kulo_fast
+    if mascot == kulo:
+        show kulo_slow
+    elif mascot == kali:
+        show kali_slow
+    mascot "Loading..."
+    if mascot == kulo:
+        hide kulo_slow
+    elif mascot == kali:
+        hide kali_slow
+
+    if mascot == kulo:
+        show kulo_mid
+    elif mascot == kali:
+        show kali_mid
+    mascot "Loading..."
+    if mascot == kulo:
+        hide kulo_mid
+    elif mascot == kali:
+        hide kali_mid
+
+    if mascot == kulo:
+        show kulo_fast
+    elif mascot == kali:
+        show kali_fast
+    mascot "Loading..."
+    if mascot == kulo:
+        hide kulo_fast
+    elif mascot == kali:
+        hide kali_fast
 
     $ correct_name = False
     while not correct_name:
@@ -23,7 +53,8 @@ label intro:
         while not name:
             $ name = renpy.input("Name:", length=10)
             $ name = name.strip().title()
-        kulo "Your name is [name]?"
+        scene app bg textbox
+        mascot "Your name is [name]?"
         menu:
             "Yes":
                 $ correct_name = True

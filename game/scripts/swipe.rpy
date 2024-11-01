@@ -2,17 +2,18 @@ label swipe:
     stop music fadeout 1.0
     play music "audio/music/swipe.ogg"
 
-    python:
-        rights = []
-        swiped = False
-        direction = ""
-        character = ""
+    label .setup:
+        python:
+            rights = []
+            swiped = False
+            direction = ""
+            character = ""
 
-    jump swipe.geo
+        jump swipe.geo
 
     label .choice:
         show app textbox
-        kulo "What will you do?" 
+        kulo "So, what do you think?" 
 
         menu:
             "Swipe Left":
@@ -35,7 +36,7 @@ label swipe:
         elif direction == "right":
             with swipe_right
         elif direction == "up":
-            with scroll_up
+            with new_screen
 
         return
 
@@ -46,7 +47,7 @@ label swipe:
         while not swiped:
             scene bus morning at bg_nora_new
             show geo casual neutral at char
-            with scroll_up
+            with new_screen
             geo ""
             show geo casual smile at char
             with dissolve
@@ -138,5 +139,17 @@ label swipe:
             bianca ""
 
             call swipe.choice
+
+    label .repeat:
+        scene app bg
+        call swipe.direction
+        scene app bg textbox with dissolve
+        mascot "Are you OK with your swipes?"
+        menu:
+            "Yup!":
+                pass
+                mascot "You liked [rights]"
+            "Repeat":
+                jump swipe.setup
 
     jump chat

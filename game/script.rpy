@@ -20,7 +20,11 @@ transform bg_resto_cafe:
 
 # Characters
 # Mascot
-define kulo = Character("Kulo", color="#CD5F2A")
+define simmer_color = "#CD5F2A"
+define simmer = Character("Simmer", color=simmer_color)
+define kulo = Character("Kulo", color=simmer_color)
+define kali = Character("Kali", color=simmer_color)
+define mascot = kulo
 # Boys
 define geo = Character("Geo", color="#609AD2")
 define pao = Character("Pao", color="#212630")
@@ -37,8 +41,8 @@ define swipe_speed = 0.2
 define swipe_left = CropMove(swipe_speed, "slideawayleft")
 define swipe_right = CropMove(swipe_speed, "slideawayright")
 
-define scroll_speed = 0.75
-define scroll_up = PushMove(scroll_speed, "pushup")
+define new_screen = PushMove(0.3, "pushup")
+define scroll_up = PushMove(0.75, "pushup")
 
 # Phone
 # Mascot
