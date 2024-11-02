@@ -41,7 +41,7 @@ define swipe_speed = 0.2
 define swipe_left = CropMove(swipe_speed, "slideawayleft")
 define swipe_right = CropMove(swipe_speed, "slideawayright")
 
-define new_screen = PushMove(0.3, "pushup")
+$ new_screen = PushMove(0.3, "pushup")
 define scroll_up = PushMove(0.75, "pushup")
 
 # Phone
