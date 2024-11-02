@@ -6,6 +6,7 @@ label tips:
 
         define tip = {}
 
+        define tip_title = ""
         define part_1 = ""
         define part_2 = ""
         define part_3 = ""
@@ -28,7 +29,7 @@ label tips:
                     "part 3": "But be careful. Using these strategies too much can lead to negative reactions.",
                 },
                 {
-                    "title": "Initial Information",
+                    "title": "First Impressions",
                     "part 1": "First impressions are processed quickly but have long-lasting effects.",
                     "part 2": "For some traits like fear, even impressions from little information can be accurate.",
                     "part 3": "Still, impressions are updated with new information relevant the current situation.",
@@ -59,6 +60,12 @@ label tips:
                     "part 2": "A good way to get out of it is to give the other person direct negative reactions.",
                     "part 3": "Also, stay focused on the conversation and conserve your energy to resist.",
                 },
+                {
+                    "title": "Balance Theory",
+                    "part 1": "Liking and agreeing with another person supposedly that leads to positive emotions.",
+                    "part 2": "Liking and disagreeing should lead to negative emotions and wanting an agreement.",
+                    "part 3": "Disliking and disagreeing is said to just lead to indifference.",
+                },
             ]
             tips_C = [
                 {
@@ -80,7 +87,7 @@ label tips:
                     "part 3": 'Historically, "red is sexy" has shown to be true, especially for women.',
                 },
                 {
-                    "title": "Friendship",
+                    "title": "Forming Friendships",
                     "part 1": "The way you make strong friendships differs as you age.",
                     "part 2": "As an adult, it's important to take time in different situations with friends.",
                     "part 3": "Also, aim for a friendship where there's mutual support and self-disclosure.",
@@ -94,6 +101,7 @@ label tips:
             tips = []
             tip = {}
 
+            tip_title = ""
             part_1 = ""
             part_2 = ""
             part_3 = ""
@@ -123,6 +131,7 @@ label tips:
                 tip = renpy.random.choice(tips_C)
                 tips_C.remove(tip)
 
+            tip_title = tip["title"].lower()
             part_1 = tip["part 1"]
             part_2 = tip["part 2"]
             part_3 = tip["part 3"]
@@ -138,7 +147,7 @@ label tips:
             show kulo_slow
         elif mascot == kali:
             show kali_slow
-        mascot "Loading...Preparing random tip..."
+        mascot "Loading... \n Preparing random tip on \n \"[title]\"..."
         mascot "[part_1]"
         if mascot == blank:
             hide blank_slow
