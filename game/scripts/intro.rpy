@@ -1,4 +1,5 @@
 label intro:
+    $ story = "intro"
     
     label .welcome:
         stop music fadeout 1.0
@@ -6,15 +7,11 @@ label intro:
 
         scene app bg
 
-        show blank_slow
-        simmer "Loading..."
-        hide blank_slow
+        call tips.give
 
     label .gender:
-        define gender = ""
-
         scene app bg textbox
-        simmer "Boy or girl?"
+        blank "Boy or girl?"
         menu:
             "Boy":
                 $ gender = "boy"
@@ -59,20 +56,14 @@ label intro:
                 pass
             "No":
                 jump intro.gender
-
-    label .tips:
-        call tips.pick
-        call tips.pick
-        call tips.pick
-        call tips.pick
-
+                
     label .name:
         $ correct_name = False
         while not correct_name:
             $ name = ""
             while not name:
                 $ name = renpy.input("Name:", length=10)
-                $ name = name.strip().title()
+                $ name = name.strip()
             scene app bg textbox
             mascot "Your name is [name]?"
             menu:

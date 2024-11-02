@@ -1,10 +1,10 @@
-2024-11-01 16:05:15 UTC
+2024-11-02 07:32:47 UTC
 macOS-15.0.1-arm64-arm-64bit
 Ren'Py 8.2.0.24012702
 
 Early init took 0.05s
 Loading error handling took 0.03s
-Loading script took 0.12s
+Loading script took 0.08s
 Loading save slot metadata took 0.03s
 Loading persistent took 0.00s
 INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
@@ -13,7 +13,6 @@ Loading analysis data took 0.01s
 Analyze and compile ATL took 0.00s
 Reloading save slot metadata took 0.04s
 Index archives took 0.00s
-Backing up script files to '/Users/aljo/Library/RenPy/backups/Simmer':
 Dump and make backups took 0.00s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
@@ -23,15 +22,14 @@ Creating interface object took 0.00s
 Cleaning stores took 0.00s
 Init translation took 0.03s
 Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-INFO:renpy_warp_service:connected to renpy warp socket server on :40111
-Save screen analysis took 0.02s
+Load screen analysis took 0.03s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
 Prepare screens took 0.05s
 Save pyanalysis. took 0.00s
-Save bytecode. took 0.03s
+Save bytecode. took 0.00s
 Running _start took 0.00s
-Interface start took 0.22s
+Interface start took 0.33s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1280, 800)
@@ -43,14 +41,8 @@ Version: b'2.1 Metal - 89.3'
 Display Info: None
 Screen sizes: virtual=(414, 736) physical=(1280, 772) drawable=(2560, 1544)
 Maximum texture size: 4096x4096
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
 Screen sizes: virtual=(414, 736) physical=(1280, 772) drawable=(2560, 1544)
 Maximum texture size: 4096x4096
-Cleaning stores took 0.00s
-Init translation took 0.00s
-Build styles took 0.00s
-Load screen analysis took 0.03s
-Analyze screens took 0.00s
-Prepare screens took 0.00s
-Running _start took 0.00s
 INFO:renpy_warp_service:closing websocket connection :40111
 INFO:renpy_warp_service:socket service got code 4000, service closing

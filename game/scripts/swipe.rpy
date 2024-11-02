@@ -1,4 +1,6 @@
 label swipe:
+    $ story = "swipe"
+
     stop music fadeout 1.0
     play music "audio/music/swipe.ogg"
 
@@ -11,6 +13,8 @@ label swipe:
         define profile = ""
 
     label .flow:
+        call tips.give
+
         $ renpy.random.shuffle(characters)
         while len(characters) > 0:
             python:

@@ -1,6 +1,10 @@
 label chat:
+    $ story = "chat"
+
     stop music fadeout 1.0
     play music "audio/music/chat.ogg"
+
+    call tips.give
 
     define player_phone = Character("Aljo", color="#CD5F2A", kind=nvl, callback=Phone_ReceiveSound)
     $ MC_Name = "Aljo"

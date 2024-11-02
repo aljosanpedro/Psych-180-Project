@@ -1,6 +1,8 @@
 label ending:
+    $ story = "ending"
     
-    
+    call tips.give
+
     label .dating:
         stop music fadeout 1.0
         play music "audio/music/endings/dating.ogg"

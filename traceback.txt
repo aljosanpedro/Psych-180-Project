@@ -1,28 +1,34 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/options.rpy", line 76, in script
-    define config.enter_transition = new_screen
-  File "game/options.rpy", line 76, in <module>
-    define config.enter_transition = new_screen
-NameError: name 'new_screen' is not defined
+  File "game/scripts/profile.rpy", line 36, in script call
+    call tips.give
+  File "game/scripts/tips.rpy", line 105, in script call
+    call tips.pick
+  File "game/scripts/tips.rpy", line 114, in script
+    python:
+  File "game/scripts/tips.rpy", line 134, in <module>
+    part_1 = tip["part 1"]
+KeyError: 'part 1'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/options.rpy", line 76, in script
-    define config.enter_transition = new_screen
-  File "/Users/aljo/Downloads/5y1s/psych 180/renpy-8.2.0-sdk/renpy/ast.py", line 2219, in execute
-    self.set()
-  File "/Users/aljo/Downloads/5y1s/psych 180/renpy-8.2.0-sdk/renpy/ast.py", line 2233, in set
-    value = renpy.python.py_eval_bytecode(self.code.bytecode)
-  File "/Users/aljo/Downloads/5y1s/psych 180/renpy-8.2.0-sdk/renpy/python.py", line 1202, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/options.rpy", line 76, in <module>
-    define config.enter_transition = new_screen
-NameError: name 'new_screen' is not defined
+  File "game/scripts/profile.rpy", line 36, in script call
+    call tips.give
+  File "game/scripts/tips.rpy", line 105, in script call
+    call tips.pick
+  File "game/scripts/tips.rpy", line 114, in script
+    python:
+  File "/Users/aljo/Downloads/5y1s/psych 180/renpy-8.2.0-sdk/renpy/ast.py", line 823, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/Users/aljo/Downloads/5y1s/psych 180/renpy-8.2.0-sdk/renpy/python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/scripts/tips.rpy", line 134, in <module>
+    part_1 = tip["part 1"]
+KeyError: 'part 1'
 
 macOS-15.0.1-arm64-arm-64bit arm64
 Ren'Py 8.2.0.24012702
 Simmer 1.0
-Sat Nov  2 00:02:43 2024
+Sat Nov  2 15:19:37 2024

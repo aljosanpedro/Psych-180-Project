@@ -1,5 +1,6 @@
 label profile:
-
+    $ story = "profile"
+    
     label .setup:
         define player_profile = {}
 
@@ -32,6 +33,8 @@ label profile:
         return
 
     label .part_1:
+        call tips.give
+
         while not section_correct:
             mascot "Part 1"
 

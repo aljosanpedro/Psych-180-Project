@@ -1,6 +1,10 @@
 label date:
+    $ story = "date"
+
     stop music fadeout 1.0
     # TODO: date music
+
+    call tips.give
 
     label .player:
         label .boy_1:

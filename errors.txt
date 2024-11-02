@@ -2,17 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/scripts/profile.rpy", line 23: expected statement.
-    section_correct = True
-                    ^
+File "game/scripts/tips.rpy", line 111: expected statement.
+    tips = []
+         ^
 
-File "game/scripts/profile.rpy", line 24: expected statement.
-    player_profile.update(section_stats)
-                                        ^
-
-File "game/scripts/profile.rpy", line 26: expected statement.
-    section_correct = False
-                    ^
+File "game/scripts/tips.rpy", line 112: expected statement.
+    tip = {}
+        ^
 
 Ren'Py Version: Ren'Py 8.2.0.24012702
-Fri Nov  1 23:28:24 2024
+Sat Nov  2 15:19:00 2024

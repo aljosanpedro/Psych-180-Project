@@ -21,20 +21,15 @@ transform bg_resto_cafe:
 # Characters
 # Mascot
 define simmer_color = "#CD5F2A"
-define simmer = Character("Simmer", color=simmer_color)
+define blank = Character("Simmer", color=simmer_color)
 define kulo = Character("Kulo", color=simmer_color)
 define kali = Character("Kali", color=simmer_color)
-define mascot = kulo
 # Boys
 define geo = Character("Geo", color="#609AD2")
 define pao = Character("Pao", color="#212630")
 # Girls
 define lily = Character("Lily", color="#61575A")
 define bianca = Character("Bianca", color="#C3A393")
-
-# Inputs
-define name = ""
-define player = Character("[name]")
 
 # Transitions
 define swipe_speed = 0.2
@@ -60,8 +55,18 @@ define e_nvl = Character("Eileen", kind=nvl, callback=Phone_SendSound)
 define config.adv_nvl_transition = None
 define config.nvl_adv_transition = Dissolve(0.3)
 
+# Global Vars
+define story = ""
+
+define gender = ""
+define mascot = blank
+
+define name = ""
+define player = Character("[name]")
+
 # Labels
 label start:
+    call tips.reset
     jump intro
 
 # intro -> profile -> swipe -> chat -> date -> decide -> ending
