@@ -1,11 +1,15 @@
 label swipe_lily:
+
+    call swipe_lily.stats
+    jump swipe_lily.profile
+
     label .stats:
         python:
             character = "lily"
 
             c_bio = "my friend made my account...di ko nga alam bat ako nandito hahaha good luck nlng"
-            c_self_presentation = "Self_promotion"
-            c_self_conscious_emo = "Hubristic pride"
+            c_self_presentation = "Self-deprecation"
+            c_self_conscious_emo = "Shame"
 
             c_gender_preference = "Men & women"
             c_relationship_type = "Either"
@@ -23,6 +27,8 @@ label swipe_lily:
             c_sociable = "Ambivert"
             c_belief = "Fate & choice"
             c_exercise = "A lot"
+
+        return
 
     label .profile:
         $ swiped = False

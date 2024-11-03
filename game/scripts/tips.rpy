@@ -147,7 +147,7 @@ label tips:
             show kulo still
         elif mascot == kali:
             show kali still
-        mascot "Loading...Preparing random tip on \"[tip_title]\"..."
+        mascot "Loading...Preparing random tip on [tip_title]..."
 
         if mascot == blank:
             show blank_slow

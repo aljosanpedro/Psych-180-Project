@@ -1,4 +1,8 @@
 label swipe_bianca:
+
+    call swipe_bianca.stats
+    jump swipe_bianca.profile
+
     label .stats:
         python:
             character = "bianca"
@@ -23,6 +27,8 @@ label swipe_bianca:
             c_sociable = "Introvert"
             c_belief = "Fate"
             c_exercise = "A lot"
+
+        return
 
     label .profile:
         $ swiped = False

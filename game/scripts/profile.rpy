@@ -34,7 +34,7 @@ label profile:
         if p_section == "others":
             player "Prefers: [p_gender_preference]\nFriends or Love: [p_relationship_type]\nFuture Priority: [p_future_priority]"
         elif p_section == "basics":
-            player "Age: [p_age_range]\nInterests: [p_interests_specific]\nOccupation: [p_occupation_specific]\nEducation: [p_education]"
+            player "Age: [p_age_range]\nInterests: [p_interests]\nOccupation: [p_occupation]\nEducation: [p_education]"
         elif p_section == "personality":
             player "Social Skills: [p_social_skills]\nSociable: [p_sociable]\nBelief: [p_belief]\nExercise: [p_exercise]"
 

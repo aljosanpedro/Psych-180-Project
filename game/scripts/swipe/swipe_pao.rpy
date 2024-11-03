@@ -1,7 +1,11 @@
 label swipe_pao:
+
+    call swipe_pao.stats
+    jump swipe_pao.profile
+
     label .stats:
         python:
-            character = "geo"
+            character = "pao"
 
             c_bio = "sabi ng mga tropa ko subukan ko daw 'to. eh wala naman sigurong mawala, kaya ayon."
             c_self_presentation = "Ingratiation"
@@ -24,14 +28,16 @@ label swipe_pao:
             c_belief = "Fate & choice"
             c_exercise = "Sometimes"
 
+        return
+
     label .profile:
         $ swiped = False
         while not swiped:
             scene street afternoon store at bg_nora_new
-            show pao date neutral at char
+            show pao date smile at char
             call swipe.direction
             pao "[c_bio]"
-            show pao date smile at char
+            show pao date neutral at char
             with dissolve
             pao "Prefers: [c_gender_preference]\nFriends or Love: [c_relationship_type]\nDistance: [c_distance]\nFuture Priority: [c_future_priority]"
 

@@ -1,10 +1,14 @@
 label swipe_geo:
+
+    call swipe_geo.stats
+    jump swipe_geo.profile
+
     label .stats:
         python:
             character = "geo"
 
             c_bio = "hi! i'm a fil-am and can speak some tagalog. i'm here for a much-deserved vacation 😇"
-            c_self_presentation = "Self_promotion"
+            c_self_presentation = "Self-promotion"
             c_self_conscious_emo = "Hubristic pride"
 
             c_gender_preference = "Women"
@@ -23,6 +27,8 @@ label swipe_geo:
             c_sociable = "Ambivert"
             c_belief = "Choices"
             c_exercise = "Not much"
+
+        return
 
     label .profile:
         $ swiped = False

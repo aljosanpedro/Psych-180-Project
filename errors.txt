@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/scripts/profile/profile_basics.rpy", line 99: expected 'label_name' not found.
-    jump profile_basics.
-        ^
+File "game/scripts/chat.rpy", line 30: invalid syntax
+    mascot "[p_self_presentation], [c_self_presentation]"
+            ^
 
 Ren'Py Version: Ren'Py 8.2.0.24012702
-Sun Nov  3 10:47:31 2024
+Sun Nov  3 14:00:18 2024
