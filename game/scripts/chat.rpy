@@ -97,17 +97,17 @@ label chat:
 
     label .choose:
         if len(matches) == 0:
-            mascot "It seems you didn't get any matches..."
+            kulo "It seems you didn't get any matches..."
             jump ending.pass
 
         $ matches_extracted = ", ".join(matches)
-        mascot "You matched with: [matches_extracted]"
+        kulo "You matched with: [matches_extracted]"
 
         if len(matches) == 1:
             $ to_chat = matches[0]    
         
         if len(matches) > 1:
-            mascot "Who from your matches would you like to get to know the most?"
+            kulo "Who from your matches would you like to get to know the most?"
 
             $ match_1 = matches[0]
             $ match_2 = matches[1]

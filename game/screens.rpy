@@ -293,7 +293,7 @@ screen navigation():
 
         if main_menu:
             xalign 0.5
-            yalign 0.61
+            yalign 0.84
         else:
             xpos gui.navigation_xpos
             yalign 0.5
@@ -303,8 +303,10 @@ screen navigation():
         if main_menu:
 
             textbutton _("Start") action Start()
-
+        
         else:
+            
+            textbutton _("About") action ShowMenu("about")
 
             textbutton _("History") action ShowMenu("history")
 
@@ -322,7 +324,7 @@ screen navigation():
 
             textbutton _("Main Menu") action MainMenu()
 
-        # textbutton _("About") action ShowMenu("about")
+            
 
         
         # if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):

@@ -70,12 +70,12 @@ label swipe:
         scene app bg textbox with dissolve
 
         if len(rights) == 0:
-            mascot "You liked...no one!"
+            kulo "You liked...no one!"
         else:
             $ rights_extracted = ', '.join(rights).title()
-            mascot "You liked: [rights_extracted]"
+            kulo "You liked: [rights_extracted]"
 
-        mascot "Are you OK with your swipes?"
+        kulo "Are you OK with your swipes?"
         menu:
             "Yup!":
                 if len(rights) == 0:
@@ -88,7 +88,7 @@ label swipe:
 
     label .choice:
         show app textbox
-        mascot "So, what do you think?"
+        kulo "So, what do you think?"
 
         menu:
             "No thanks.":
@@ -103,7 +103,7 @@ label swipe:
                 $ swiped = False
                 $ direction = "up"
 
-                mascot "Alright, let me scroll that back up for you."
+                kulo "Alright, let me scroll that back up for you."
 
         return
 

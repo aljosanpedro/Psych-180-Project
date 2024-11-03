@@ -35,12 +35,12 @@ label ending:
         stop music fadeout 1.0
         play music "audio/music/endings/friends.ogg"
 
-        mascot "friends"
+        kulo "friends"
 
     label .pass:
         stop music fadeout 1.0
         play music "audio/music/endings/pass.ogg"
 
-        mascot "pass"
+        kulo "pass"
         
     jump end

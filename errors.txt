@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/scripts/chat.rpy", line 30: invalid syntax
-    mascot "[p_self_presentation], [c_self_presentation]"
-            ^
+File "game/scripts/tips.rpy", line 148: end of line expected.
+    kulo "[tip["part 1"]]"
+                ^
 
 Ren'Py Version: Ren'Py 8.2.0.24012702
-Sun Nov  3 14:00:18 2024
+Sun Nov  3 20:45:37 2024

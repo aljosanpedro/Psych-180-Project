@@ -30,7 +30,7 @@ label profile:
 
     label .repeat:
         if p_section != "bio":
-            mascot "Here's what your choices will look like:"
+            kulo "Here's what your choices will look like:"
         if p_section == "others":
             player "Prefers: [p_gender_preference]\nFriends or Love: [p_relationship_type]\nFuture Priority: [p_future_priority]"
         elif p_section == "basics":
@@ -38,12 +38,12 @@ label profile:
         elif p_section == "personality":
             player "Social Skills: [p_social_skills]\nSociable: [p_sociable]\nBelief: [p_belief]\nExercise: [p_exercise]"
 
-        mascot "Is that right?"
+        kulo "Is that right?"
         menu:
             "Yes":
                 $ section_correct = True
             "No":
-                mascot "That's alright. Let's go over that section again."
+                kulo "That's alright. Let's go over that section again."
                 $ section_correct = False
 
         return

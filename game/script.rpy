@@ -21,9 +21,7 @@ transform bg_resto_cafe:
 # Characters
 # Mascot
 define simmer_color = "#CD5F2A"
-define blank = Character("Simmer", color=simmer_color)
 define kulo = Character("Kulo", color=simmer_color)
-define kali = Character("Kali", color=simmer_color)
 # Boys
 define geo = Character("Geo", color="#609AD2")
 define pao = Character("Pao", color="#212630")
@@ -49,9 +47,6 @@ define pao_phone = Character("Pao", color="#212630", kind=nvl, callback=Phone_Se
 define lily_phone = Character("Lily", color="#61575A", kind=nvl, callback=Phone_SendSound)
 define bianca_phone = Character("Bianca", color="#C3A393", kind=nvl, callback=Phone_SendSound)
 
-define n_nvl = Character("Nighten", kind=nvl, image="nighten", callback=Phone_SendSound)
-define e_nvl = Character("Eileen", kind=nvl, callback=Phone_SendSound)
-
 define config.adv_nvl_transition = None
 define config.nvl_adv_transition = Dissolve(0.3)
 
@@ -59,7 +54,6 @@ define config.nvl_adv_transition = Dissolve(0.3)
 define story = ""
 
 define gender = ""
-define mascot = blank
 
 define name = ""
 define player = Character("[name]")

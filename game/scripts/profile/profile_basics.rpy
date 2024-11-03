@@ -4,7 +4,7 @@ label profile_basics:
     $ section_correct = False
     while not section_correct:
         label .age_range:
-            mascot "Where does your age fit?"
+            kulo "Where does your age fit?"
 
             scene app bg textbox
             menu:
@@ -15,13 +15,13 @@ label profile_basics:
                 "Below 21":
                     $ p_temp = "Below 21"
                 "What was that?":
-                    mascot "That's alright. I asked..."
+                    kulo "That's alright. I asked..."
                     jump profile_basics.age_range
 
             $ p_age_range = p_temp
 
         label .interests_1:
-            mascot "What are your interests like?"
+            kulo "What are your interests like?"
 
             scene app bg textbox
             menu:
@@ -33,7 +33,7 @@ label profile_basics:
                     $ p_temp = "Technical"
                     call profile_basics.interests_2
                 "What was that?":
-                    mascot "That's alright. I asked..."
+                    kulo "That's alright. I asked..."
                     jump profile_basics.interests_1
 
             $ p_interests = p_temp
@@ -41,7 +41,7 @@ label profile_basics:
             jump profile_basics.occupation_1
 
         label .interests_2:
-            mascot "Would you rather..."
+            kulo "Would you rather..."
 
             scene app bg textbox
             menu:
@@ -52,13 +52,13 @@ label profile_basics:
                 "Learn":
                     pass
                 "What was that?":
-                    mascot "That's alright. I asked..."
-                    jump profile_basics.interests_1
+                    kulo "That's alright. I asked..."
+                    jump profile_basics.interests_2
 
             return
 
         label .occupation_1:
-            mascot "Are you employed?"
+            kulo "Are you employed?"
 
             scene app bg textbox
             menu:
@@ -69,7 +69,7 @@ label profile_basics:
                 "I'm a student":
                     $ p_temp = "Student"
                 "What was that?":
-                    mascot "That's alright. I asked..."
+                    kulo "That's alright. I asked..."
                     call profile_basics.occupation_1
 
             $ p_occupation = p_temp
@@ -77,7 +77,7 @@ label profile_basics:
             jump profile_basics.education_1
 
         label .occupation_2:
-            mascot "What best describes your occupation?"
+            kulo "What best describes your occupation?"
 
             scene app bg textbox
             menu:
@@ -88,7 +88,7 @@ label profile_basics:
                 "Business":
                     $ p_temp = "Business"
                 "What was that?":
-                    mascot "That's alright. I asked..."
+                    kulo "That's alright. I asked..."
                     jump profile_basics.occupation_2
 
             $ p_occupation = p_temp
@@ -96,7 +96,7 @@ label profile_basics:
             return
 
         label .education_1:
-            mascot "Are you in college?"
+            kulo "Are you in college?"
 
             scene app bg textbox
             menu:
@@ -107,10 +107,10 @@ label profile_basics:
                 "What was that?":
                     jump profile_basics.education_1
 
-            jump profile_basics.end
+            jump profile_basics.repeat
 
         label .education_2:
-            mascot "What's your highest level of schooling?"
+            kulo "What's your highest level of schooling?"
 
             scene app bg textbox
             menu:
@@ -121,14 +121,14 @@ label profile_basics:
                 "College":
                     $ p_temp = "College Grad."
                 "What was that?":
-                    mascot "That's alright. I asked..."
+                    kulo "That's alright. I asked..."
                     jump profile_basics.education_2
 
             $ p_education = p_temp
 
             return
 
-        label .end:
+        label .repeat:
             call profile.repeat
 
     return

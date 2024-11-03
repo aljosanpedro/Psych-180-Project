@@ -7,9 +7,9 @@ label tips:
         define tip = {}
 
         define tip_title = ""
-        define part_1 = ""
-        define part_2 = ""
-        define part_3 = ""
+        define tip_part_1 = ""
+        define tip_part_2 = ""
+        define tip_part_3 = ""
 
         call tips.reset
 
@@ -102,9 +102,9 @@ label tips:
             tip = {}
 
             tip_title = ""
-            part_1 = ""
-            part_2 = ""
-            part_3 = ""
+            tip_part_1 = ""
+            tip_part_2 = ""
+            tip_part_3 = ""
 
         return
 
@@ -132,63 +132,28 @@ label tips:
                 tips_C.remove(tip)
 
             tip_title = tip["title"].lower()
-            part_1 = tip["part 1"]
-            part_2 = tip["part 2"]
-            part_3 = tip["part 3"]
+            tip_part_1 = tip["part 1"]
+            tip_part_2 = tip["part 2"]
+            tip_part_3 = tip["part 3"]
 
         return
-    
+
     label .say:
         scene app bg
 
-        if mascot == blank:
-            show blank still
-        elif mascot == kulo:
-            show kulo still
-        elif mascot == kali:
-            show kali still
-        mascot "Loading...Preparing random tip on [tip_title]..."
+        show kulo still
+        kulo "Loading...Preparing random tip on [tip_title]..."
 
-        if mascot == blank:
-            show blank_slow
-        elif mascot == kulo:
-            show kulo_slow
-        elif mascot == kali:
-            show kali_slow
-        mascot "[part_1]"
-        if mascot == blank:
-            hide blank_slow
-        elif mascot == kulo:
-            hide kulo_slow
-        elif mascot == kali:
-            hide kali_slow
+        show kulo_slow
+        kulo "[tip_part_1]"
+        hide kulo_slow
 
-        if mascot == blank:
-            show blank_mid
-        elif mascot == kulo:
-            show kulo_mid
-        elif mascot == kali:
-            show kali_mid
-        mascot "[part_2]"
-        if mascot == blank:
-            hide blank_mid
-        elif mascot == kulo:
-            hide kulo_mid
-        elif mascot == kali:
-            hide kali_mid
+        show kulo_mid
+        kulo "[tip_part_2]"
+        hide kulo_mid
 
-        if mascot == blank:
-            show blank_fast
-        elif mascot == kulo:
-            show kulo_fast
-        elif mascot == kali:
-            show kali_fast
-        mascot "[part_3]"
-        if mascot == blank:
-            hide blank_fast
-        elif mascot == kulo:
-            hide kulo_fast
-        elif mascot == kali:
-            hide kali_fast
+        show kulo_fast
+        kulo "[tip_part_3]"
+        hide kulo_fast
 
         return

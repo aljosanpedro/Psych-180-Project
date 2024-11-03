@@ -5,7 +5,7 @@ label profile_others:
     while not section_correct:
         
         label .gender_preference:
-            mascot "Are there any preferences for genders you want to see here?"
+            kulo "Are there any preferences for genders you want to see here?"
 
             scene app bg textbox
             menu:
@@ -16,13 +16,13 @@ label profile_others:
                 "Any's fine":
                     $ p_temp = "Men & women"
                 "What was that?":
-                    mascot "That's alright. I asked..."
+                    kulo "That's alright. I asked..."
                     jump profile_others.gender_preference
 
             $ p_gender_preference = p_temp
 
         label .relationship_type:
-            mascot "What kind of relationship are you looking for here?"
+            kulo "What kind of relationship are you looking for here?"
 
             scene app bg textbox
             menu:
@@ -33,13 +33,13 @@ label profile_others:
                 'Either':
                     $ p_temp = "Either"
                 "What was that?":
-                    mascot "That's alright. I asked..."
+                    kulo "That's alright. I asked..."
                     jump profile_others.relationship_type
 
             $ p_relationship_type = p_temp
 
         label .future_priority:
-            mascot "What's your main priority for the near future?"
+            kulo "What's your main priority for the near future?"
 
             scene app bg textbox
             menu:
@@ -50,7 +50,7 @@ label profile_others:
                 "Relax":
                     $ p_temp = "Relax"
                 "What was that?":
-                    mascot "That's alright. I asked..."
+                    kulo "That's alright. I asked..."
                     jump profile_others.future_priority
 
             $ p_future_priority = p_temp

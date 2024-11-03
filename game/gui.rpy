@@ -55,31 +55,32 @@ define gui.interface_text_color = '#404040'
 ## Fonts and Font Sizes ########################################################
 
 ## The font used for in-game text.
-define gui.text_font = "gui/fonts/text/SunflowerHighway-mrzv.otf"
+define gui.text_font = "gui/fonts/RainbowCupcake-x31zj.ttf"
 
 ## The font used for character names.
-define gui.name_text_font = "gui/fonts/names/RainbowCupcake-x31zj.ttf"
+# define gui.name_text_font = "gui/fonts/PostregularRegular-eZYzp.ttf"
+define gui.name_text_font = "gui/fonts/Cheesecake.ttf"
 
 ## The font used for out-of-game text.
-define gui.interface_text_font = gui.name_text_font
+define gui.interface_text_font = gui.text_font
 
 ## The size of normal dialogue text.
 define gui.text_size = 28
 
 ## The size of character names.
-define gui.name_text_size = 34
+define gui.name_text_size = 45
 
 ## The size of text in the game's user interface.
-define gui.interface_text_size = 32
+define gui.interface_text_size = 34
 
 ## The size of labels in the game's user interface.
-define gui.label_text_size = 8
+define gui.label_text_size = 20
 
 ## The size of text on the notify screen.
 define gui.notify_text_size = 6
 
 ## The size of the game's title.
-define gui.title_text_size = 17
+define gui.title_text_size = 32
 
 
 ## Main and Game Menus #########################################################
@@ -105,8 +106,8 @@ define gui.textbox_yalign = 1.0
 
 ## The placement of the speaking character's name, relative to the textbox.
 ## These can be a whole number of pixels from the left or top, or 0.5 to center.
-define gui.name_xpos = 57
-define gui.name_ypos = 123
+define gui.name_xpos = 55
+define gui.name_ypos = 112
 
 ## The horizontal alignment of the character's name. This can be 0.0 for left-
 ## aligned, 0.5 for centered, and 1.0 for right-aligned.
