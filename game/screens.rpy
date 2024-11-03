@@ -303,9 +303,9 @@ screen navigation():
         if main_menu:
 
             textbutton _("Start") action Start()
-        
+
         else:
-            
+
             textbutton _("About") action ShowMenu("about")
 
             textbutton _("History") action ShowMenu("history")

@@ -44,6 +44,7 @@ screen PhoneDialogue(dialogue, items=None):
             frame:
                 xpos 0.0
                 ypos -1600
+                
                 background "images/ui/app/app textbox.png"
                 # background Solid("#FAF5D8")
                 foreground None
@@ -81,7 +82,7 @@ screen nvl_phonetext(dialogue,items):
                     xsize 650
                     text_align 0.5
                     italic True
-                    size 40
+                    size gui.name_text_size
                     slow_cps False
                     id d.what_id
                     if d.current and len(items)==0:

@@ -9,9 +9,8 @@ label images:
         define kulo_slow_pause = 0.5
         define kulo_mid_pause = 0.25
         define kulo_fast_pause = 0.1
-        define kulo_left = "images/ui/mascot/left.png"
-        define kulo_right = "images/ui/mascot/right.png"
-
+        define kulo_left = "images/ui/app/anim/left.png"
+        define kulo_right = "images/ui/app/anim/right.png"
     label .animations:
         image main_menu_anim:
             main_menu_left

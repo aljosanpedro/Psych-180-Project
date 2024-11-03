@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/scripts/tips.rpy", line 148: end of line expected.
-    kulo "[tip["part 1"]]"
-                ^
+File "game/screens.rpy", line 298: '_000' is not a keyword argument or valid child of the vbox statement.
+    xpos 1_000
+              ^
 
 Ren'Py Version: Ren'Py 8.2.0.24012702
-Sun Nov  3 20:45:37 2024
+Sun Nov  3 21:14:36 2024

@@ -6,6 +6,40 @@ label chat_bianca:
 
     menu (nvl=True):
         "Test choice 1":
-            nvl_narrator "Choice 1"
+            nvl_narrator "{size=*[scale]}Choice 1"
         "Test choice 2":
-            nvl_narrator "Choice 2"
+            nvl_narrator "{size=*[scale]}Choice 2"
+
+    show app_bg_anim
+    menu:
+        "Test choice 1":
+            hide app_bg_anim
+            nvl_narrator "{size=*[scale]}Choice 1"
+        "Test choice 2":
+            hide app_bg_anim
+            nvl_narrator "{size=*[scale]}Choice 2"
+
+    bianca_phone "{size=*[scale]}Test!"
+    bianca_phone "{size=*[scale]}Test!"
+    bianca_phone "{size=*[scale]}Test!"
+    bianca_phone "{size=*[scale]}Test!"
+    bianca_phone "{size=*[scale]}Test!"
+    bianca_phone "{size=*[scale]}Test!"
+    bianca_phone "{size=*[scale]}Test!"
+    bianca_phone "{size=*[scale]}Test!"
+
+    menu (nvl=True):
+        "Test choice 1":
+            nvl_narrator "{size=*[scale]}Choice 1"
+        "Test choice 2":
+            nvl_narrator "{size=*[scale]}Choice 2"
+
+    menu:
+        "Test choice 1":
+            hide window
+            nvl_narrator "{size=*[scale]}Choice 1"
+        "Test choice 2":
+            hide window
+            nvl_narrator "{size=*[scale]}Choice 2"
+
+    return

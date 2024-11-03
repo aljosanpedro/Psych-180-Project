@@ -34,6 +34,7 @@ define swipe_speed = 0.2
 define swipe_left = CropMove(swipe_speed, "slideawayleft")
 define swipe_right = CropMove(swipe_speed, "slideawayright")
 
+# $ because was defined in gui.rpy
 $ new_screen = PushMove(0.3, "pushup")
 define scroll_up = PushMove(0.75, "pushup")
 
@@ -48,7 +49,7 @@ define lily_phone = Character("Lily", color="#61575A", kind=nvl, callback=Phone_
 define bianca_phone = Character("Bianca", color="#C3A393", kind=nvl, callback=Phone_SendSound)
 
 define config.adv_nvl_transition = None
-define config.nvl_adv_transition = Dissolve(0.3)
+define config.nvl_adv_transition = None
 
 # Global Vars
 define story = ""
