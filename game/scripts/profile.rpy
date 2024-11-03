@@ -2,88 +2,58 @@ label profile:
     $ story = "profile"
     
     label .setup:
-        define player_profile = {}
-
+        define p_temp = ""
+        define p_section = ""
         define section_correct = False
-        define section_stats = {}
-        define section_stat = {}
+        define question_answered = False
 
-        jump profile.part_1
+        define p_bio = ""
+        define p_self_presentation = ""
+        define p_self_conscious_emo = ""
 
-    label .add_stat:
-        $ section_stats.update(section_stat)
-        $ section_stat = {}
+        define p_gender_preference = ""
+        define p_relationship_type = ""
+        define p_distance = ""
+        define p_future_priority = ""
 
-        return
+        define p_age_range = ""
+        define p_interests = ""
+        define p_occupation = ""
+        define p_education = ""
+
+        define p_social_skills = ""
+        define p_sociable = ""
+        define p_belief = ""
+        define p_exercise = ""
+
+        jump profile.flow
 
     label .repeat:
-        $ section_stats_extracted = ', '.join(section_stats.values())
-        mascot "So, you're [section_stats_extracted]..."
+        if p_section != "bio":
+            mascot "Here's what your choices will look like:"
+        if p_section == "others":
+            player "Prefers: [p_gender_preference]\nFriends or Love: [p_relationship_type]\nFuture Priority: [p_future_priority]"
+        elif p_section == "basics":
+            player "Age: [p_age_range]\nInterests: [p_interests_specific]\nOccupation: [p_occupation_specific]\nEducation: [p_education]"
+        elif p_section == "personality":
+            player "Social Skills: [p_social_skills]\nSociable: [p_sociable]\nBelief: [p_belief]\nExercise: [p_exercise]"
 
-        mascot "Correct?"
+        mascot "Is that right?"
         menu:
             "Yes":
                 $ section_correct = True
-                $ player_profile.update(section_stats)
             "No":
+                mascot "That's alright. Let's go over that section again."
                 $ section_correct = False
-
-        $ section_stats = {}
 
         return
 
-    label .part_1:
+    label .flow:
         call tips.give
 
-        while not section_correct:
-            mascot "Part 1"
+        call profile_bio
+        call profile_others
+        call profile_basics
+        call profile_personality
 
-            mascot "Choice 1"
-            menu:
-                "Option 1":
-                    mascot "Option 1"
-                    $ section_stat = {"Choice 1": "Option 1"}
-                "Option 2":
-                    mascot "Option 2"
-                    $ section_stat = {"Choice 1": "Option 2"}
-            call profile.add_stat
-
-            mascot "Choice 2"
-            menu:
-                "Option 1":
-                    mascot "Option 1"
-                    $ section_stat = {"Choice 2": "Option 1"}
-                "Option 2":
-                    mascot "Option 2"
-                    $ section_stat = {"Choice 2": "Option 2"}
-            call profile.add_stat
-
-            call profile.repeat
-            
-    label .part_2:
-        while not section_correct:
-            mascot "Part 2"
-
-            mascot "Choice 1"
-            menu:
-                "Option 1":
-                    mascot "Option 1"
-                    $ section_stat = {"Choice 1": "Option 1"}
-                "Option 2":
-                    mascot "Option 2"
-                    $ section_stat = {"Choice 1": "Option 2"}
-            call profile.add_stat
-
-            mascot "Choice 2"
-            menu:
-                "Option 1":
-                    mascot "Option 1"
-                    $ section_stat = {"Choice 1": "Option 1"}
-                "Option 2":
-                    mascot "Option 2"
-                    $ section_stat = {"Choice 1": "Option 2"}
-            call profile.add_stat
-
-            call profile.repeat
-
-    jump swipe
+        jump swipe

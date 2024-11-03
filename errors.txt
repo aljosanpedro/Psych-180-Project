@@ -2,13 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/scripts/tips.rpy", line 111: expected statement.
-    tips = []
-         ^
-
-File "game/scripts/tips.rpy", line 112: expected statement.
-    tip = {}
+File "game/scripts/profile/profile_basics.rpy", line 99: expected 'label_name' not found.
+    jump profile_basics.
         ^
 
 Ren'Py Version: Ren'Py 8.2.0.24012702
-Sat Nov  2 15:19:00 2024
+Sun Nov  3 10:47:31 2024

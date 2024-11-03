@@ -142,12 +142,19 @@ label tips:
         scene app bg
 
         if mascot == blank:
+            show blank still
+        elif mascot == kulo:
+            show kulo still
+        elif mascot == kali:
+            show kali still
+        mascot "Loading...Preparing random tip on \"[tip_title]\"..."
+
+        if mascot == blank:
             show blank_slow
         elif mascot == kulo:
             show kulo_slow
         elif mascot == kali:
             show kali_slow
-        mascot "Loading... \n Preparing random tip on \n \"[title]\"..."
         mascot "[part_1]"
         if mascot == blank:
             hide blank_slow

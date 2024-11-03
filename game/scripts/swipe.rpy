@@ -12,6 +12,27 @@ label swipe:
         define characters = ["geo", "pao", "lily", "bianca"]
         define profile = ""
 
+        define c_bio = ""
+        define c_self_presentation = ""
+        define c_self_conscious_emo = ""
+
+        define c_gender_preference = ""
+        define c_relationship_type = ""
+        define c_distance = ""
+        define c_future_priority = ""
+
+        define c_age_range = ""
+        define c_interests = ""
+        define c_interests_specific = ""
+        define c_occupation = ""
+        define c_occupation_specific = ""
+        define c_education = ""
+
+        define c_social_skills = ""
+        define c_sociable = ""
+        define c_belief = ""
+        define c_exercise = ""
+
     label .flow:
         call tips.give
 
@@ -20,17 +41,15 @@ label swipe:
             python:
                 profile = renpy.random.choice(characters)
                 characters.remove(profile)
-            mascot "[profile]"
-            mascot "[characters]"
 
             if profile == "geo":
-                call swipe.geo
+                call swipe_geo
             elif profile == "pao":
-                call swipe.pao
+                call swipe_pao
             elif profile == "lily":
-                call swipe.lily
+                call swipe_lily
             elif profile == "bianca":
-                call swipe.bianca
+                call swipe_bianca
 
         jump swipe.repeat
 
@@ -53,7 +72,7 @@ label swipe:
         if len(rights) == 0:
             mascot "You liked...no one!"
         else:
-            $ rights_extracted = ', '.join(rights)
+            $ rights_extracted = ', '.join(rights).title()
             mascot "You liked: [rights_extracted]"
 
         mascot "Are you OK with your swipes?"
@@ -69,20 +88,22 @@ label swipe:
 
     label .choice:
         show app textbox
-        kulo "So, what do you think?"
+        mascot "So, what do you think?"
 
         menu:
-            "Swipe Left":
+            "No thanks.":
                 $ swiped = True
                 $ direction = "left"
-            "Swipe Right":
+            "I like them!":
                 $ swiped = True
                 $ direction = "right"
 
                 $ rights.append(character)
-            "Reread Profile":
+            "Wait...":
                 $ swiped = False
                 $ direction = "up"
+
+                mascot "Alright, let me scroll that back up for you."
 
         return
 
@@ -93,113 +114,5 @@ label swipe:
             with swipe_right
         elif direction == "up":
             with new_screen
-
-        return
-
-    label .geo:
-        $ character = "geo"
-        $ swiped = False
-
-        while not swiped:
-            scene bus morning at bg_nora_new
-            show geo casual neutral at char
-            call swipe.direction
-            geo ""
-            show geo casual smile at char
-            with dissolve
-            geo ""
-
-            scene school morning stairs at bg_nora_new
-            show geo work happy at char
-            with scroll_up
-            geo ""
-
-            scene resto evening center at bg_resto_evening
-            show geo date smile at char
-            with scroll_up
-            geo ""
-
-            call swipe.choice
-
-        return
-
-    label .pao:
-        $ character = "pao"
-        $ swiped = False
-
-        while not swiped:
-            scene street afternoon store at bg_nora_new
-            show pao date neutral at char
-            call swipe.direction
-            pao ""
-            show pao date smile at char
-            with dissolve
-            pao ""
-
-            scene resto inside at bg_nora_old
-            show pao work happy at char
-            with scroll_up
-            pao ""
-
-            scene house sala table at bg_senpai
-            show pao casual neutral at char
-            with scroll_up
-            pao ""
-
-            call swipe.choice
-
-        return
-
-    label .lily:
-        $ character = "lily"
-        $ swiped = False
-
-        while not swiped:
-            scene school morning shrine at bg_nora_new
-            show lily date smile at char
-            call swipe.direction
-            lily ""
-            show lily date happy at char
-            with dissolve
-            lily ""
-
-            scene playground slide at bg_senpai
-            show lily casual shock at char
-            with scroll_up
-            lily ""
-
-            scene train inside at bg_nora_old
-            show lily work neutral at char
-            with scroll_up
-            lily ""
-
-            call swipe.choice
-        
-        return
-
-    label .bianca:
-        $ character = "bianca"
-        $ swiped = False
-
-        while not swiped:
-            scene resto cake shop at bg_nora_old
-            show bianca date neutral at char
-            call swipe.direction
-            bianca ""
-            show bianca date smile at char
-            with dissolve
-            bianca ""
-
-            scene house kitchen at bg_senpai
-            show bianca work happy at char
-            with scroll_up
-            bianca ""
-
-            scene house bedroom closet at bg_senpai
-            show bianca casual neutral at char
-            with scroll_up
-            bianca ""
-
-            call swipe.choice
 
         return
