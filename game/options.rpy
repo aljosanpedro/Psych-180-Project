@@ -30,6 +30,7 @@ define config.version = "1.0"
 ## triple-quotes, and leave a blank line between paragraphs.
 
 define gui.about = _p("""
+test
 """)
 
 
@@ -71,25 +72,27 @@ define config.main_menu_music = "audio/music/title.ogg"
 ## Each variable should be set to a transition, or None to indicate that no
 ## transition should be used.
 
+define new_screen = PushMove(0.3, "pushup")
+
 ## Entering or exiting the game menu.
 
-define config.enter_transition = dissolve
-define config.exit_transition = dissolve
+define config.enter_transition = new_screen
+define config.exit_transition = new_screen
 
 
 ## Between screens of the game menu.
 
-define config.intra_transition = dissolve
+define config.intra_transition = new_screen
 
 
 ## A transition that is used after a game has been loaded.
 
-define config.after_load_transition = None
+define config.after_load_transition = new_screen
 
 
 ## Used when entering the main menu after the game has ended.
 
-define config.end_game_transition = None
+define config.end_game_transition = new_screen
 
 
 ## A variable to set the transition used when the game starts does not exist.

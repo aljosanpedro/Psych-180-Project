@@ -1,33 +1,44 @@
-# Main Menu
-define main_menu_pause = 0.5
-image main_menu_animated:
-    "gui/title/left.png"
-    pause main_menu_pause
-    "gui/title/right.png"
-    pause main_menu_pause
-    repeat
+label images:
 
-# Simon
-define simon_slow_pause = 0.5
-image simon_slow:
-    "images/ui/simon/big/left.png"
-    pause simon_slow_pause
-    "images/ui/simon/big/right.png"
-    pause simon_slow_pause
-    repeat
+    label .setup:
+        define main_menu_pause = (0.67 / 2)
+        define main_menu_zoom = (1 / 2.5)
+        define main_menu_left = "gui/main_menu/left.png"
+        define main_menu_right = "gui/main_menu/right.png"
 
-define simon_mid_pause = 0.25
-image simon_mid:
-    "images/ui/simon/big/left.png"
-    pause simon_mid_pause
-    "images/ui/simon/big/right.png"
-    pause simon_mid_pause
-    repeat
+        define kulo_slow_pause = 0.5
+        define kulo_mid_pause = 0.25
+        define kulo_fast_pause = 0.1
+        define kulo_left = "images/ui/app/anim/left.png"
+        define kulo_right = "images/ui/app/anim/right.png"
+    label .animations:
+        image main_menu_anim:
+            main_menu_left
+            zoom(main_menu_zoom)
+            pause main_menu_pause
+            main_menu_right
+            zoom(main_menu_zoom)
+            pause main_menu_pause
+            repeat
 
-define simon_fast_pause = 0.1
-image simon_fast:
-    "images/ui/simon/big/left.png"
-    pause simon_fast_pause
-    "images/ui/simon/big/right.png"
-    pause simon_fast_pause
-    repeat
+
+        image kulo_slow:
+            kulo_left
+            pause kulo_slow_pause
+            kulo_right
+            pause kulo_slow_pause
+            repeat
+
+        image kulo_mid:
+            kulo_left
+            pause kulo_mid_pause
+            kulo_right
+            pause kulo_mid_pause
+            repeat
+
+        image kulo_fast:
+            kulo_left
+            pause kulo_fast_pause
+            kulo_right
+            pause kulo_fast_pause
+            repeat

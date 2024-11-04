@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 100: end of line expected.
-    with swipe left
-               ^
+File "game/scripts/chat/chat_bianca.rpy", line 23: choice menuitem expects a non-empty block.
+    "Test choice 2":
+                    ^
 
 Ren'Py Version: Ren'Py 8.2.0.24012702
-Wed Oct 30 14:55:41 2024
+Mon Nov  4 10:41:02 2024

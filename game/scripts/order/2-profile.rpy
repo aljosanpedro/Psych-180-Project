@@ -1,3 +1,0 @@
-label profile:
-
-    jump swipe
