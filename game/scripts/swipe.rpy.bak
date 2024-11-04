@@ -51,13 +51,13 @@ label swipe:
                 characters.remove(profile)
 
             if profile == "geo":
-                call swipe_geo from _call_swipe_geo
+                call swipe_geo
             elif profile == "pao":
-                call swipe_pao from _call_swipe_pao
+                call swipe_pao
             elif profile == "lily":
-                call swipe_lily from _call_swipe_lily
+                call swipe_lily
             elif profile == "bianca":
-                call swipe_bianca from _call_swipe_bianca
+                call swipe_bianca
 
         jump swipe.repeat
 
@@ -74,7 +74,7 @@ label swipe:
 
     label .repeat:
         scene app bg
-        call swipe.direction from _call_swipe_direction
+        call swipe.direction
         scene app bg textbox with q_fade
         show kulo_slow
 
@@ -101,9 +101,9 @@ label swipe:
             "No...":
                 show kulo_slow
                 kulo "That's alright! Let me get another serving for you..."
-                call swipe.reset from _call_swipe_reset
-                call tips.reset from _call_tips_reset_2
-                call tips.give from _call_tips_give_6
+                call swipe.reset
+                call tips.reset
+                call tips.give
                 jump swipe.flow
 
     label .choice:

@@ -41,7 +41,7 @@ label profile_basics:
                     show app bg
                     show kulo_mid 
                     with q_fade
-                    call profile_basics.interests_2 from _call_profile_basics_interests_2
+                    call profile_basics.interests_2
                 "What was that?":
                     show kulo_mid with entrance
                     kulo "That's alright. I asked..."
@@ -79,7 +79,7 @@ label profile_basics:
             menu:
                 "Yes":
                     show app bg kulo text with q_fade
-                    call profile_basics.occupation_2 from _call_profile_basics_occupation_2
+                    call profile_basics.occupation_2
                 "No":
                     $ p_temp = "None"
                 "I'm a student":
@@ -87,7 +87,7 @@ label profile_basics:
                 "What was that?":
                     show kulo_mid with entrance
                     kulo "That's alright. I asked..."
-                    call profile_basics.occupation_1 from _call_profile_basics_occupation_1
+                    call profile_basics.occupation_1
 
             $ p_occupation = p_temp
 
@@ -125,7 +125,7 @@ label profile_basics:
                     show app bg
                     show kulo_mid 
                     with q_fade
-                    call profile_basics.education_2 from _call_profile_basics_education_2
+                    call profile_basics.education_2
                 "What was that?":
                     show kulo_mid with entrance
                     kulo "That's alright. I asked..."
@@ -154,6 +154,6 @@ label profile_basics:
             return
 
         label .repeat:
-            call profile.repeat from _call_profile_repeat
+            call profile.repeat
 
     return

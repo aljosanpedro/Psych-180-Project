@@ -64,7 +64,7 @@ define player = Character("[name]")
 
 # Labels
 label start:
-    call tips.reset from _call_tips_reset
+    call tips.reset
     jump intro
 
 # intro -> profile -> swipe -> chat -> date -> decide -> ending

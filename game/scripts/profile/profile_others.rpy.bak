@@ -66,6 +66,6 @@ label profile_others:
 
             $ p_future_priority = p_temp
 
-        call profile.repeat from _call_profile_repeat_1
+        call profile.repeat
 
     return

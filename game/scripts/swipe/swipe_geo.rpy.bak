@@ -1,6 +1,6 @@
 label swipe_geo:
 
-    call swipe_geo.stats from _call_swipe_geo_stats_1
+    call swipe_geo.stats
     jump swipe_geo.profile
 
     label .stats:
@@ -35,7 +35,7 @@ label swipe_geo:
         while not swiped:
             scene bus morning at bg_nora_new
             show geo casual neutral at char
-            call swipe.direction from _call_swipe_direction_2
+            call swipe.direction
             geo "[c_bio]"
             show geo casual smile at char
             with dissolve
@@ -51,6 +51,6 @@ label swipe_geo:
             with scroll_up
             geo "Social Skills: [c_social_skills]\nSociable: [c_sociable]\nBelief: [c_belief]\nExercise: [c_exercise]"
 
-            call swipe.choice from _call_swipe_choice_1
+            call swipe.choice
 
     return

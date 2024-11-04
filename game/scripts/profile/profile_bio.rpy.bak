@@ -51,7 +51,7 @@ label profile_bio:
                     $ p_temp = "Shame"
                 "They're alright":
                     show app bg kulo text with q_fade
-                    call profile_bio.self_conscious_emo_2 from _call_profile_bio_self_conscious_emo_2   
+                    call profile_bio.self_conscious_emo_2   
                 "What was that?":
                     show kulo still with entrance
                     kulo "That's alright. I asked..."

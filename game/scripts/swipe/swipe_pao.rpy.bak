@@ -1,6 +1,6 @@
 label swipe_pao:
 
-    call swipe_pao.stats from _call_swipe_pao_stats_1
+    call swipe_pao.stats
     jump swipe_pao.profile
 
     label .stats:
@@ -35,7 +35,7 @@ label swipe_pao:
         while not swiped:
             scene street afternoon store at bg_nora_new
             show pao date smile at char
-            call swipe.direction from _call_swipe_direction_4
+            call swipe.direction
             pao "[c_bio]"
             show pao date neutral at char
             with dissolve
@@ -51,6 +51,6 @@ label swipe_pao:
             with scroll_up
             pao "Social Skills: [c_social_skills]\nSociable: [c_sociable]\nBelief: [c_belief]\nExercise: [c_exercise]"
 
-            call swipe.choice from _call_swipe_choice_3
+            call swipe.choice
 
     return

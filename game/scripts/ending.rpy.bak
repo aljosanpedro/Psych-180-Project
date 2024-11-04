@@ -1,7 +1,7 @@
 label ending:
     $ story = "ending"
     
-    call tips.give from _call_tips_give_3
+    call tips.give
 
     label .dating:
         stop music fadeout 1.0

@@ -78,25 +78,25 @@ label profile:
             "No":
                 show kulo_slow with entrance
                 kulo "That's alright. We can start over again..."
-                call tips.reset from _call_tips_reset_1
+                call tips.reset
                 jump profile
 
         return
 
     label .flow:
-        call tips.give from _call_tips_give_5
+        call tips.give
 
         show kulo still with entrance
         kulo "First, I'll throw you some practice questions, [name]."
         kulo "Just to make sure you get what's going on."
         kulo "First up..."
-        call profile_bio from _call_profile_bio
+        call profile_bio
 
         scene app bg kulo text with q_fade
         kulo "Alright, I think you got that."
         kulo "Now, let's get on with the real questions"
         kulo "This first set will be about what you're looking for."
-        call profile_others from _call_profile_others
+        call profile_others
         hide kulo_slow
 
         scene app bg
@@ -104,7 +104,7 @@ label profile:
         with q_fade
         kulo "Let's keep cooking up your profile, [name]."
         kulo "Next, let's go over your basic info."
-        call profile_basics from _call_profile_basics
+        call profile_basics
         hide kulo_mid
 
         scene app bg
@@ -112,10 +112,10 @@ label profile:
         with q_fade
         kulo "Whew, I can feel it. Things are getting spicy now!"
         kulo "Last, tell me more about your personality and attitudes."
-        call profile_personality from _call_profile_personality
+        call profile_personality
         hide kulo_fast
 
-        call profile.check from _call_profile_check
+        call profile.check
 
         jump swipe
 

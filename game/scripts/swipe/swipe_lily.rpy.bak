@@ -1,6 +1,6 @@
 label swipe_lily:
 
-    call swipe_lily.stats from _call_swipe_lily_stats_1
+    call swipe_lily.stats
     jump swipe_lily.profile
 
     label .stats:
@@ -35,7 +35,7 @@ label swipe_lily:
         while not swiped:
             scene school morning shrine at bg_nora_new
             show lily date smile at char
-            call swipe.direction from _call_swipe_direction_3
+            call swipe.direction
             lily "[c_bio]"
             show lily date happy at char
             with dissolve
@@ -51,6 +51,6 @@ label swipe_lily:
             with scroll_up
             lily "Social Skills: [c_social_skills]\nSociable: [c_sociable]\nBelief: [c_belief]\nExercise: [c_exercise]"
 
-            call swipe.choice from _call_swipe_choice_2
+            call swipe.choice
 
     return

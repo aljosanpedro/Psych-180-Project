@@ -11,7 +11,7 @@ label tips:
         define tip_part_2 = ""
         define tip_part_3 = ""
 
-        call tips.reset from _call_tips_reset_3
+        call tips.reset
 
     label .reset:
         python:
@@ -112,14 +112,14 @@ label tips:
         return
 
     label .give:
-        call tips.pick from _call_tips_pick
-        call tips.say from _call_tips_say
+        call tips.pick
+        call tips.say
 
         return
 
     label .pick:
         if len(tips_A) == 0 or len(tips_B) == 0 or len(tips_C) == 0:
-            call tips.reset from _call_tips_reset_4
+            call tips.reset
 
         python:
             tip = {}

@@ -87,6 +87,6 @@ label profile_personality:
 
             $ p_exercise = p_temp
 
-        call profile.repeat from _call_profile_repeat_2
+        call profile.repeat
 
     return

@@ -5,7 +5,7 @@ label intro:
         stop music fadeout 1.0
         play music "audio/music/profile.ogg"
 
-        call tips.give from _call_tips_give_4
+        call tips.give
 
         show kulo still
         with entrance

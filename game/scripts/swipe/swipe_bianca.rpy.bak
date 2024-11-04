@@ -1,6 +1,6 @@
 label swipe_bianca:
 
-    call swipe_bianca.stats from _call_swipe_bianca_stats_1
+    call swipe_bianca.stats
     jump swipe_bianca.profile
 
     label .stats:
@@ -35,7 +35,7 @@ label swipe_bianca:
         while not swiped:
             scene resto cake shop at bg_nora_old
             show bianca date neutral at char
-            call swipe.direction from _call_swipe_direction_1
+            call swipe.direction
             bianca "[c_bio]"
             show bianca date smile at char
             with dissolve
@@ -51,7 +51,7 @@ label swipe_bianca:
             with scroll_up
             bianca "Social Skills: [c_social_skills]\nSociable: [c_sociable]\nBelief: [c_belief]\nExercise: [c_exercise]"
 
-            call swipe.choice from _call_swipe_choice
+            call swipe.choice
 
 
     return

@@ -4,7 +4,7 @@ label decide:
     stop music fadeout 1.0
     play music "audio/music/decide.ogg"
 
-    call tips.give from _call_tips_give_2
+    call tips.give
 
     """
     back to chats?

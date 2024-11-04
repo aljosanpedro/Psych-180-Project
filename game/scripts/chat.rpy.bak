@@ -5,7 +5,7 @@ label chat:
         stop music fadeout 1.0
         play music "audio/music/chat.ogg"
 
-        call tips.give from _call_tips_give
+        call tips.give
 
         define sim_temp = 0
         define sim_match = 3
@@ -70,27 +70,27 @@ label chat:
 
     label .matches:
         if "geo" in rights:
-            call swipe_geo.stats from _call_swipe_geo_stats
-            call chat.similarity from _call_chat_similarity
+            call swipe_geo.stats
+            call chat.similarity
             
             $ sim_geo = sim_temp
             if sim_geo >= sim_match:
                 $ matches.append("Geo")
         if "pao" in rights:
-            call swipe_pao.stats from _call_swipe_pao_stats
-            call chat.similarity from _call_chat_similarity_1
+            call swipe_pao.stats
+            call chat.similarity
             $ sim_pao = sim_temp
             if sim_pao >= sim_match:
                 $ matches.append("Pao")
         if "lily" in rights:
-            call swipe_lily.stats from _call_swipe_lily_stats
-            call chat.similarity from _call_chat_similarity_2
+            call swipe_lily.stats
+            call chat.similarity
             $ sim_lily = sim_temp
             if sim_lily >= sim_match:
                 $ matches.append("Lily")
         if "bianca" in rights:
-            call swipe_bianca.stats from _call_swipe_bianca_stats
-            call chat.similarity from _call_chat_similarity_3
+            call swipe_bianca.stats
+            call chat.similarity
             $ sim_bianca = sim_temp
             if sim_bianca >= sim_match:
                 $ matches.append("Bianca")
@@ -152,12 +152,12 @@ label chat:
         scene app bg
 
         if to_chat == "Geo":
-            call chat_geo from _call_chat_geo
+            call chat_geo
         elif to_chat == "Pao":
-            call chat_pao from _call_chat_pao
+            call chat_pao
         elif to_chat == "Lily":
-            call chat_lily from _call_chat_lily
+            call chat_lily
         elif to_chat == "Bianca":
-            call chat_bianca from _call_chat_bianca
+            call chat_bianca
 
         jump date
