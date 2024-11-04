@@ -1,5 +1,5 @@
 label swipe:
-    $ story = "swipe"
+    $ story = "swiping"
 
     stop music fadeout 1.0
     play music "audio/music/swipe.ogg"
@@ -33,9 +33,17 @@ label swipe:
         define c_belief = ""
         define c_exercise = ""
 
-    label .flow:
-        call tips.give
+    label .dialog:
+        show kulo_slow
+        kulo "Your profile's looking good, [name]."
+        kulo "I've got some profiles incoming for you."
+        kulo "Tell me at the end of each what you think."
+        kulo "You can also choose to go over it again."
+        hide kulo_slow
+        show kulo_fast
+        kulo "Here comes the {i}entree{/i}!"
 
+    label .flow:
         $ renpy.random.shuffle(characters)
         while len(characters) > 0:
             python:
@@ -67,7 +75,10 @@ label swipe:
     label .repeat:
         scene app bg
         call swipe.direction
-        scene app bg textbox with dissolve
+        scene app bg textbox with q_fade
+        show kulo_slow
+
+        kulo "How was that? Now, let see here..."
 
         if len(rights) == 0:
             kulo "You liked...no one!"
@@ -75,15 +86,24 @@ label swipe:
             $ rights_extracted = ', '.join(rights).title()
             kulo "You liked: [rights_extracted]"
 
+        hide kulo_slow
+
+        show kulo_mid
         kulo "Are you OK with your swipes?"
+
+        scene app bg textbox with q_fade
         menu:
             "Yup!":
                 if len(rights) == 0:
                     jump ending.pass       
                 else:
                     jump chat
-            "Repeat":
+            "No...":
+                show kulo_slow
+                kulo "That's alright! Let me get another serving for you..."
                 call swipe.reset
+                call tips.reset
+                call tips.give
                 jump swipe.flow
 
     label .choice:

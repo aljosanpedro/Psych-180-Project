@@ -4,19 +4,24 @@ label chat_bianca:
     bianca_phone "{size=*[scale]}Hi [name]!"
     bianca_phone "{size=*[scale]}I'm Bianca, we matched just now"
 
+    player_phone "{size=*[scale]}Hi Bianca!"
+    player_phone "{size=*[scale]}I found your profile interesting"  
+
     menu (nvl=True):
         "Test choice 1":
             nvl_narrator "{size=*[scale]}Choice 1"
         "Test choice 2":
             nvl_narrator "{size=*[scale]}Choice 2"
 
-    show app_bg_anim
+    scene app bg
+    show kulo_slow
+    with q_fade
     menu:
         "Test choice 1":
-            hide app_bg_anim
+            hide kulo_slow
             nvl_narrator "{size=*[scale]}Choice 1"
         "Test choice 2":
-            hide app_bg_anim
+            hide kulo_slow
             nvl_narrator "{size=*[scale]}Choice 2"
 
     bianca_phone "{size=*[scale]}Test!"

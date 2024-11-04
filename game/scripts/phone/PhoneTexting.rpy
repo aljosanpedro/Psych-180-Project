@@ -169,7 +169,7 @@ style phoneFrame is default
 
 style phoneFrame_frame:
     background "phone/bg/background.png"
-    foreground "phone/bg/foreground.png"
+    foreground None
     
     yfill True
     xfill True

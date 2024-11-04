@@ -293,7 +293,7 @@ screen navigation():
 
         if main_menu:
             xalign 0.5
-            yalign 0.84
+            yalign 0.82
         else:
             xpos gui.navigation_xpos
             yalign 0.5
@@ -302,7 +302,7 @@ screen navigation():
 
         if main_menu:
 
-            textbutton _("Start") action Start()
+            textbutton _("Make Profile") action Start()
 
         else:
 
@@ -324,9 +324,7 @@ screen navigation():
 
             textbutton _("Main Menu") action MainMenu()
 
-            
 
-        
         # if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
             ## Help isn't necessary or relevant to mobile devices.
@@ -336,7 +334,9 @@ screen navigation():
 
             ## The quit button is banned on iOS and unnecessary on Android and
             ## Web.
-            textbutton _("Quit") action Quit(confirm=not main_menu)
+
+            pass
+            # textbutton _("Exit App") action Quit(confirm=not main_menu)
 
 
 style navigation_button is gui_button

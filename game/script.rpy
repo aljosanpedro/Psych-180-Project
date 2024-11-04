@@ -33,12 +33,15 @@ define bianca = Character("Bianca", color="#C3A393")
 define swipe_speed = 0.2
 define swipe_left = CropMove(swipe_speed, "slideawayleft")
 define swipe_right = CropMove(swipe_speed, "slideawayright")
+define entrance = Dissolve(0.5)
+define q_fade = Dissolve(0.1)
 
 # $ because was defined in gui.rpy
 $ new_screen = PushMove(0.3, "pushup")
 define scroll_up = PushMove(0.75, "pushup")
 
 # Phone
+define player_phone = Character("Aljo", color=simmer_color, kind=nvl, callback=Phone_ReceiveSound)
 # Mascot
 define kulo_phone = Character("Kulo", color="#CD5F2A", kind=nvl, callback=Phone_SendSound)
 # Boys
@@ -56,7 +59,7 @@ define story = ""
 
 define gender = ""
 
-define name = ""
+define name = "Aljo"
 define player = Character("[name]")
 
 # Labels
@@ -67,4 +70,7 @@ label start:
 # intro -> profile -> swipe -> chat -> date -> decide -> ending
 
 label end:
+    # DEAR FUTURE SELF:
+    # WE ENDED ON CHAT.CHOOSE BEFORE CHOOSING A MATCH TO CHAT WITH!
+
     return

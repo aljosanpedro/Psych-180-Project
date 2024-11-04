@@ -3,72 +3,85 @@ label profile_personality:
 
     $ section_correct = False
     while not section_correct:
-        
+        show app bg
+        show kulo_fast
+        with new_screen
         label .social_skills:
             kulo "How would you rate your social skills?"
-            kulo "A: I can handle anything\nB: I just need some prep time\nC: Can't someone else do it?"
-
-            scene app bg textbox
+            
+            scene app bg textbox with q_fade
             menu:
-                'A':
+                "I can handle it!":
                     $ p_temp = "Confident"
-                'B':
+                "Give me some time":
                     $ p_temp = "Just right"
-                'C':
+                "Why me?":
                     $ p_temp = "Not good"
                 "What was that?":
+                    show kulo_mid with entrance
                     kulo "That's alright. I asked..."
                     jump profile_personality.social_skills
 
             $ p_social_skills = p_temp
 
+        show app bg
+        show kulo_fast
+        with q_fade
         label .sociable:
             kulo "How do you like to recharge after a long day?"
-            kulo "A: Hang out with friends\nB: Do my own thing\nC: A bit of both"
 
-            scene app bg textbox
+            scene app bg textbox with q_fade
             menu:
-                'A':
+                "Friendship time":
                     $ p_temp = "Extrovert"
-                'B':
+                "Do my own thing":
                     $ p_temp = "Introvert"
-                'C':
+                "A bit of both":
                     $ p_temp = "Ambivert"
                 "What was that?":
+                    show kulo_mid with entrance
                     kulo "That's alright. I asked..."
                     jump profile_personality.sociable
 
             $ p_sociable = p_temp
 
+        show app bg
+        show kulo_fast
+        with q_fade
         label .belief:
             kulo "Do you believe in destiny?"
 
-            scene app bg textbox
+            scene app bg textbox with q_fade
             menu:
-                'Yes':
+                "Totally":
                     $ p_temp = "Fate"
-                'No':
+                "Not at all":
                     $ p_temp = "Choice"
-                'Not exactly':
+                'Not exactly...':
                     $ p_temp = "Fate & choice"
                 "What was that?":
+                    show kulo_mid with entrance
                     kulo "That's alright. I asked..."
                     jump profile_personality.belief
 
             $ p_belief = p_temp
 
+        show app bg
+        show kulo_fast
+        with q_fade
         label .exercise:
             kulo "Do you exercise?"
 
-            scene app bg textbox
+            scene app bg textbox with q_fade
             menu:
-                'Yes':
+                "A lot":
                     $ p_temp = "A lot"
-                'No':
+                "Not much":
                     $ p_temp = "Not much"
-                'Not really':
+                "Sometimes":
                     $ p_temp = "Sometimes"
                 "What was that?":
+                    show kulo_mid with entrance
                     kulo "That's alright. I asked..."
                     jump profile_personality.exercise
 

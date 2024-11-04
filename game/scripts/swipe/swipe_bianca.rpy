@@ -7,7 +7,7 @@ label swipe_bianca:
         python:
             character = "bianca"
 
-            c_bio = "you deserve good things in life, kaya you deserve me 😉\nchar lang! unless...🫣"
+            c_bio = "you deserve good things, kaya you deserve me 😉\nchar lang! unless...🫣"
             c_self_presentation = "Too much"
             c_self_conscious_emo = "Authentic pride"
 

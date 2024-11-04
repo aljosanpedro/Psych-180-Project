@@ -2,78 +2,87 @@ label profile_bio:
     $ p_section = "bio"
 
     $ section_correct = False
-    while not section_correct:
-        
+    while not section_correct:  # looped for uniformity, but will only run once
+        show app bg kulo text with new_screen
         label .self_presentation_1:
             kulo "When talking to someone you'd like to know better, how would you do it?"
-            kulo "A: Sell my strengths\nB: Be self-critical\nC: Adjust to them"
-
-            scene app bg textbox
+            
+            scene app bg textbox with q_fade
             menu:
-                'A':
+                "Sell my strengths":
                     $ p_temp = "Self-promotion"
-                'B':
+                "Self-criticize":
                     $ p_temp = "Self-deprecation"
-                'C':
+                "Adjust to them":
                     $ p_temp = "Ingratiation"
                 "What was that?":
+                    show kulo still with entrance
                     kulo "That's alright. I asked..."
                     jump profile_bio.self_presentation_1
 
             $ p_self_presentation = p_temp
 
+        show app bg kulo text with q_fade
         label .self_presentation_2:
             kulo "How accurate would you make your profile be to your actual self?"
-            kulo "A: A perfect reflection\nB: With a few changes\nC: Completely different"
-
-            scene app bg textbox
+            
+            scene app bg textbox with q_fade
             menu:
-                'A':
+                "Like a mirror":
                     pass
-                'B':
+                "Close enough":
                     pass
-                'C':
+                "Another me":
                     $ p_self_presentation = "Too much"
                 "What was that?":
+                    show kulo still with entrance
                     kulo "That's alright. I asked..."
                     jump profile_bio.self_presentation_2
 
+        show app bg kulo text with q_fade
         label .self_conscious_emo_1:
             kulo "How do you feel about other people?"
-            kulo "A: I want to help out\nB: I'd rather not bother anyone\nC: They're alright"
 
-            scene app bg textbox
+            scene app bg textbox with q_fade
             menu:
-                'A':
+                "Where? I'll join!":
                     $ p_temp = "Guilt"
-                'B':
+                "Leave me alone":
                     $ p_temp = "Shame"
-                'C':
-                    jump profile_bio.self_conscious_emo_2   
+                "They're alright":
+                    show app bg kulo text with q_fade
+                    call profile_bio.self_conscious_emo_2   
                 "What was that?":
+                    show kulo still with entrance
                     kulo "That's alright. I asked..."
                     jump profile_bio.self_conscious_emo_1
 
             $ p_self_conscious_emo = p_temp
+            
+            jump profile_bio.end
 
         label .self_conscious_emo_2:
             kulo "How do you feel about yourself?"
-            kulo "A: I'm good enough\nB: I'm the best\nC: I'm not much"
 
-            scene app bg textbox
+            scene app bg textbox with q_fade
             menu:
-                'A':
+                "I'm good enough":
                     $ p_temp = "Authentic pride"
-                'B':
+                "I'm the best":
                     $ p_temp = "Hubristic pride"
-                'C':
+                "I'm not much":
                     pass
                 "What was that?":
+                    show kulo still with entrance
                     kulo "That's alright. I asked..."
                     jump profile_bio.self_conscious_emo_2
 
             $ p_self_conscious_emo = p_temp
 
-        call profile.repeat
+            return
+
+        label .end:
+            $ section_correct = True
+            # call profile.repeat
 
     return

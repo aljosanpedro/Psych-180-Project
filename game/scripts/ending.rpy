@@ -40,7 +40,26 @@ label ending:
     label .pass:
         stop music fadeout 1.0
         play music "audio/music/endings/pass.ogg"
+        
+        scene app bg
+        show kulo_slow
+        with new_screen
 
-        kulo "pass"
+        kulo "Thanks for trying out Simmer!"
+        kulo "Look forward to our future updates soon!"
+
+    label .prototype:
+        stop music fadeout 1.0
+        play music "audio/music/endings/friends.ogg"
+
+        scene app bg
+        show kulo_slow
+        with new_screen
+
+        kulo "That's all we've got at the moment."
+        kulo "Thank you for testing out the prototype for Simmer:"
+        kulo "a dating app simulator with social psychology elements!"
+        kulo "Please look forward to our future updates!"
+        kulo "Until then, keep the spice simmering!"
         
     jump end

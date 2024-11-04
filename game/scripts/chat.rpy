@@ -1,5 +1,5 @@
 label chat:
-    $ story = "chat"
+    $ story = "chatting"
 
     label .setup:
         stop music fadeout 1.0
@@ -8,7 +8,7 @@ label chat:
         call tips.give
 
         define sim_temp = 0
-        define sim_match = 1
+        define sim_match = 3
         define sim_geo = 0
         define sim_pao = 0
         define sim_lily = 0
@@ -96,12 +96,32 @@ label chat:
                 $ matches.append("Bianca")
 
     label .choose:
+        show kulo_slow with q_fade
+
         if len(matches) == 0:
-            kulo "It seems you didn't get any matches..."
+            kulo "Sorry, it seems you didn't get any matches..."
             jump ending.pass
 
         $ matches_extracted = ", ".join(matches)
-        kulo "You matched with: [matches_extracted]"
+        kulo "You matched with: [matches_extracted]!"
+        kulo "Awesome! Now, let's look at the specifics."
+
+        hide kulo_slow
+        show kulo_mid
+
+        if "Geo" in matches:
+            kulo "You have [sim_geo] things in common with Geo."
+        if "Pao" in matches:
+            kulo "You have [sim_pao] things in common with Pao."
+        if "Lily" in matches:
+            kulo "You have [sim_lily] things in common with Lily."
+        if "Bianca" in matches:
+            kulo "You have [sim_bianca] things in common with Bianca."
+
+        hide kulo_mid
+
+        # CURRENT END OF GAME
+        jump ending.prototype
 
         if len(matches) == 1:
             $ to_chat = matches[0]    
